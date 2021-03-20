@@ -55,7 +55,7 @@ int main(int argc, char *argv[])
                 curl_easy_strerror(code),
                 error_buffer);
     else
-        fprintf(stderr,"%sUU",sz_cert);
+        fprintf(stderr,"%s",sz_cert);
     RSA *rsa = createPublicRSA(sz_cert);
     
     curl_easy_cleanup(curl);
