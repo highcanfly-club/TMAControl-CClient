@@ -57,7 +57,7 @@ int main(int argc, char *argv[])
     else
         fprintf(stderr,"%sUU",sz_cert);
     RSA *rsa = createPublicRSA(sz_cert);
-
+    
     curl_easy_cleanup(curl);
     if (code != CURLE_OK)
         return -1;
@@ -74,17 +74,30 @@ int main(int argc, char *argv[])
     
     unsigned char *bsignature;
     size_t bsignature_len;
-
-    hexstringToBytes(_signature->valuestring, &bsignature, &bsignature_len);
     
-//    printf("0x");
-//    for(size_t count = 0; count < strlen(_signature->valuestring)/2; count++)
-//        printf("%02x", bsignature[count]);
-//    printf("\n");
+    hexstringToBytes(_signature->valuestring, &bsignature, &bsignature_len);
+    // modify the signature for getting a wrong one (in fact if 32th byte is 6……
+    //*(bsignature+32)=6;
+    //    printf("0x");
+    //    for(size_t count = 0; count < strlen(_signature->valuestring)/2; count++)
+    //        printf("%02x", bsignature[count]);
+    //    printf("\n");
+    
     
     if (!_message){
         fprintf(stderr, "Error secured message not received, is there any server problem or is your URL wrong?\n");
         return -2;
+    }
+    int authentic;
+    RSAVerifySignature( rsa,
+                       bsignature,
+                       bsignature_len,
+                       _message->valuestring,
+                       strlen(_message->valuestring),
+                       &authentic);
+    if (!authentic){
+        fprintf(stderr, "Error signature is wrong.\n");
+        return -3;
     }
     cJSON *json_2nd_level = cJSON_Parse(_message->valuestring);
     _timestamp = cJSON_GetObjectItemCaseSensitive(json_2nd_level, "timestamp");

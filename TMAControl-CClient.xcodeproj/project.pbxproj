@@ -74,7 +74,7 @@
 				AC704283260333E000293796 /* playMessage.h */,
 				AC704284260333E000293796 /* playMessage.c */,
 			);
-			path = "TMAControl-CClient";
+			name = "TMAControl-CClient";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
