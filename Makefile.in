@@ -102,12 +102,13 @@ CONFIG_CLEAN_VPATH_FILES =
 am__installdirs = "$(DESTDIR)$(bindir)"
 PROGRAMS = $(bin_PROGRAMS)
 am__dirstamp = $(am__leading_dot)dirstamp
-am_tmaClient_OBJECTS = tmaClient-playMessage.$(OBJEXT) \
+am_tmaClient_OBJECTS = tmaClient-signatureCheck.$(OBJEXT) \
+	tmaClient-playMessage.$(OBJEXT) \
 	cJSON/tmaClient-cJSON.$(OBJEXT) tmaClient-tmaClient.$(OBJEXT)
 tmaClient_OBJECTS = $(am_tmaClient_OBJECTS)
 tmaClient_LDADD = $(LDADD)
-tmaClient_LINK = $(CCLD) $(tmaClient_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) \
-	$(LDFLAGS) -o $@
+tmaClient_LINK = $(CCLD) $(tmaClient_CFLAGS) $(CFLAGS) \
+	$(tmaClient_LDFLAGS) $(LDFLAGS) -o $@
 AM_V_P = $(am__v_P_@AM_V@)
 am__v_P_ = $(am__v_P_@AM_DEFAULT_V@)
 am__v_P_0 = false
@@ -124,6 +125,7 @@ DEFAULT_INCLUDES = -I.@am__isrc@
 depcomp = $(SHELL) $(top_srcdir)/depcomp
 am__maybe_remake_depfiles = depfiles
 am__depfiles_remade = ./$(DEPDIR)/tmaClient-playMessage.Po \
+	./$(DEPDIR)/tmaClient-signatureCheck.Po \
 	./$(DEPDIR)/tmaClient-tmaClient.Po \
 	cJSON/$(DEPDIR)/tmaClient-cJSON.Po
 am__mv = mv -f
@@ -280,7 +282,8 @@ top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 AUTOMAKE_OPTIONS = subdir-objects
 tmaClient_CFLAGS = $(OPENSSL_INCLUDES)
-tmaClient_SOURCES = playMessage.c cJSON/cJSON.h cJSON/cJSON.c tmaClient.c playMessage.h 
+tmaClient_LDFLAGS = $(OPENSSL_LDFLAGS) $(OPENSSL_LIBS)
+tmaClient_SOURCES = signatureCheck.c playMessage.c cJSON/cJSON.h cJSON/cJSON.c tmaClient.c playMessage.h 
 all: all-am
 
 .SUFFIXES:
@@ -381,6 +384,7 @@ distclean-compile:
 	-rm -f *.tab.c
 
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/tmaClient-playMessage.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/tmaClient-signatureCheck.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/tmaClient-tmaClient.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@cJSON/$(DEPDIR)/tmaClient-cJSON.Po@am__quote@ # am--include-marker
 
@@ -405,6 +409,20 @@ am--depfiles: $(am__depfiles_remade)
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='$<' object='$@' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(COMPILE) -c -o $@ `$(CYGPATH_W) '$<'`
+
+tmaClient-signatureCheck.o: signatureCheck.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(tmaClient_CFLAGS) $(CFLAGS) -MT tmaClient-signatureCheck.o -MD -MP -MF $(DEPDIR)/tmaClient-signatureCheck.Tpo -c -o tmaClient-signatureCheck.o `test -f 'signatureCheck.c' || echo '$(srcdir)/'`signatureCheck.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/tmaClient-signatureCheck.Tpo $(DEPDIR)/tmaClient-signatureCheck.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='signatureCheck.c' object='tmaClient-signatureCheck.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(tmaClient_CFLAGS) $(CFLAGS) -c -o tmaClient-signatureCheck.o `test -f 'signatureCheck.c' || echo '$(srcdir)/'`signatureCheck.c
+
+tmaClient-signatureCheck.obj: signatureCheck.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(tmaClient_CFLAGS) $(CFLAGS) -MT tmaClient-signatureCheck.obj -MD -MP -MF $(DEPDIR)/tmaClient-signatureCheck.Tpo -c -o tmaClient-signatureCheck.obj `if test -f 'signatureCheck.c'; then $(CYGPATH_W) 'signatureCheck.c'; else $(CYGPATH_W) '$(srcdir)/signatureCheck.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/tmaClient-signatureCheck.Tpo $(DEPDIR)/tmaClient-signatureCheck.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='signatureCheck.c' object='tmaClient-signatureCheck.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(tmaClient_CFLAGS) $(CFLAGS) -c -o tmaClient-signatureCheck.obj `if test -f 'signatureCheck.c'; then $(CYGPATH_W) 'signatureCheck.c'; else $(CYGPATH_W) '$(srcdir)/signatureCheck.c'; fi`
 
 tmaClient-playMessage.o: playMessage.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(tmaClient_CFLAGS) $(CFLAGS) -MT tmaClient-playMessage.o -MD -MP -MF $(DEPDIR)/tmaClient-playMessage.Tpo -c -o tmaClient-playMessage.o `test -f 'playMessage.c' || echo '$(srcdir)/'`playMessage.c
@@ -719,6 +737,7 @@ clean-am: clean-binPROGRAMS clean-generic mostlyclean-am
 distclean: distclean-am
 	-rm -f $(am__CONFIG_DISTCLEAN_FILES)
 		-rm -f ./$(DEPDIR)/tmaClient-playMessage.Po
+	-rm -f ./$(DEPDIR)/tmaClient-signatureCheck.Po
 	-rm -f ./$(DEPDIR)/tmaClient-tmaClient.Po
 	-rm -f cJSON/$(DEPDIR)/tmaClient-cJSON.Po
 	-rm -f Makefile
@@ -769,6 +788,7 @@ maintainer-clean: maintainer-clean-am
 	-rm -f $(am__CONFIG_DISTCLEAN_FILES)
 	-rm -rf $(top_srcdir)/autom4te.cache
 		-rm -f ./$(DEPDIR)/tmaClient-playMessage.Po
+	-rm -f ./$(DEPDIR)/tmaClient-signatureCheck.Po
 	-rm -f ./$(DEPDIR)/tmaClient-tmaClient.Po
 	-rm -f cJSON/$(DEPDIR)/tmaClient-cJSON.Po
 	-rm -f Makefile

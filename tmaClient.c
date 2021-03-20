@@ -11,6 +11,7 @@
 #include <curl/curl.h>
 #include <openssl/ssl.h>
 #include "cJSON/cJSON.h"
+#include "signatureCheck.h"
 
 struct string {
     char *ptr;
@@ -54,7 +55,9 @@ int main(int argc, char *argv[])
                 curl_easy_strerror(code),
                 error_buffer);
     else
-        fprintf(stderr,"%s",sz_cert);
+        fprintf(stderr,"%sUU",sz_cert);
+    RSA *rsa = createPublicRSA(sz_cert);
+
     curl_easy_cleanup(curl);
     if (code != CURLE_OK)
         return -1;
@@ -68,6 +71,17 @@ int main(int argc, char *argv[])
     const cJSON *_uuid = NULL;
     _message = cJSON_GetObjectItemCaseSensitive(json, "message");
     _signature = cJSON_GetObjectItemCaseSensitive(json, "signature");
+    
+    unsigned char *bsignature;
+    size_t bsignature_len;
+
+    hexstringToBytes(_signature->valuestring, &bsignature, &bsignature_len);
+    
+//    printf("0x");
+//    for(size_t count = 0; count < strlen(_signature->valuestring)/2; count++)
+//        printf("%02x", bsignature[count]);
+//    printf("\n");
+    
     if (!_message){
         fprintf(stderr, "Error secured message not received, is there any server problem or is your URL wrong?\n");
         return -2;
@@ -78,6 +92,7 @@ int main(int argc, char *argv[])
     fprintf(stdout,"signature: %s\n",_signature->valuestring);
     fprintf(stdout,"uuid: %s\n",_uuid->valuestring);
     fprintf(stdout,"timestamp: %s\n",_timestamp->valuestring);
+    free(bsignature);
     return 0;
 }
 
