@@ -8,10 +8,11 @@
 #include "playMessage.h"
 #include <ao/ao.h>
 #include <mpg123.h>
+#include <string.h>
 
 #define BITS 8
 
-int playMessage(int argc, char *uuid )
+int playMessage(char *uuid)
 {
     mpg123_handle *mh;
     unsigned char *buffer;
@@ -26,9 +27,10 @@ int playMessage(int argc, char *uuid )
     int channels, encoding;
     long rate;
 
-    if(argc < 2)
-        exit(0);
-
+    size_t filename_size_needed = strlen(SOUND_FILES_LOCATION)+strlen(uuid)+strlen(SOUND_EXTENSION)+1;
+    char *filename = (char*)malloc((filename_size_needed)*sizeof(char));
+    snprintf(filename,filename_size_needed,"%s%s%s", SOUND_FILES_LOCATION, uuid, SOUND_EXTENSION);
+    
     /* initializations */
     ao_initialize();
     driver = ao_default_driver_id();
@@ -38,7 +40,7 @@ int playMessage(int argc, char *uuid )
     buffer = (unsigned char*) malloc(buffer_size * sizeof(unsigned char));
 
     /* open the file and get the decoding format */
-    mpg123_open(mh, uuid);
+    mpg123_open(mh, filename);
     mpg123_getformat(mh, &rate, &channels, &encoding);
 
     /* set the output format and open the output device */
@@ -49,12 +51,18 @@ int playMessage(int argc, char *uuid )
     format.matrix = 0;
     dev = ao_open_live(driver, &format, NULL);
 
+    fprintf(stderr, "Playing: %s\n", filename);
     /* decode and play */
-    while (mpg123_read(mh, buffer, buffer_size, &done) == MPG123_OK)
-        ao_play(dev, buffer, done);
+    int mpg123_ret = MPG123_OK;
+    while (mpg123_ret == MPG123_OK)
+        {
+            mpg123_ret = mpg123_read(mh, buffer, buffer_size, &done);
+            ao_play(dev, buffer, done);
+        }
 
     /* clean up */
     free(buffer);
+    free(filename);
     ao_close(dev);
     mpg123_close(mh);
     mpg123_delete(mh);

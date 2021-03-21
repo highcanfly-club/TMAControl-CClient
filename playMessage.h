@@ -6,8 +6,12 @@
 //
 
 #ifndef playMessage_h
+#include "config.h"
 #define playMessage_h
-
+#define SOUND_EXTENSION ".mp3"
+#ifndef SOUND_FILES_LOCATION
+#define SOUND_FILES_LOCATION "/Users/rlemeill/Development/TMAControl-CClient/sounds/"
+#endif
 #include <stdio.h>
-int playMessage(int argc, char *uuid );
+int playMessage(char *uuid );
 #endif /* playMessage_h */

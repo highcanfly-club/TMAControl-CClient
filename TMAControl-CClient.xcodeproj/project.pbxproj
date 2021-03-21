@@ -26,6 +26,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		AC1785982607BA4D0061C4F8 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
 		AC35CDBD2604E7F7004C907C /* signatureCheck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = signatureCheck.h; sourceTree = "<group>"; };
 		AC35CDBE2604E7F7004C907C /* signatureCheck.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = signatureCheck.c; sourceTree = "<group>"; };
 		AC704283260333E000293796 /* playMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = playMessage.h; sourceTree = "<group>"; };
@@ -66,6 +67,7 @@
 		AC71034726024EDE00A0C5B2 /* TMAControl-CClient */ = {
 			isa = PBXGroup;
 			children = (
+				AC1785982607BA4D0061C4F8 /* config.h */,
 				AC35CDBE2604E7F7004C907C /* signatureCheck.c */,
 				AC35CDBD2604E7F7004C907C /* signatureCheck.h */,
 				AC70428C260356FA00293796 /* cJSON.c */,

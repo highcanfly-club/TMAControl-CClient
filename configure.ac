@@ -96,6 +96,17 @@ AC_DEFUN([AX_CHECK_OPENSSL], [
     AC_SUBST([OPENSSL_LDFLAGS])
 ])
 
+dnl Sound files location
+    AC_ARG_WITH([sound-files],
+        [AS_HELP_STRING([--with-sound-files=DIR],
+            [root of the sound files directory])],
+        [
+            AC_DEFINE_UNQUOTED([SOUND_FILES_LOCATION],  "$withval"  ,[Sound files location])
+        ], [
+            AC_DEFINE_UNQUOTED([SOUND_FILES_LOCATION],[ "./" ],[Sound files location])
+        ]
+        )
+
 dnl Check curl:
 AC_CHECK_LIB([curl], [curl_easy_setopt], [], [AC_MSG_ERROR([curl_easy_setopt was not found in libcurl])])
 dnl Check ao:
@@ -106,4 +117,5 @@ dnl Check ssl:
 dnl AC_CHECK_LIB([ssl], [PEM_read_bio_RSA_PUBKEY], [], [AC_MSG_ERROR([PEM_read_bio_RSA_PUBKEY was not found in libssl])])
 AX_CHECK_OPENSSL()
 
+AC_CONFIG_HEADERS([config.h])
 AC_OUTPUT(Makefile)

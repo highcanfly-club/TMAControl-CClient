@@ -12,6 +12,7 @@
 #include <openssl/ssl.h>
 #include "cJSON/cJSON.h"
 #include "signatureCheck.h"
+#include "playMessage.h"
 
 struct string {
     char *ptr;
@@ -105,6 +106,7 @@ int main(int argc, char *argv[])
     fprintf(stdout,"signature: %s\n",_signature->valuestring);
     fprintf(stdout,"uuid: %s\n",_uuid->valuestring);
     fprintf(stdout,"timestamp: %s\n",_timestamp->valuestring);
+    playMessage(_uuid->valuestring);
     free(bsignature);
     return 0;
 }
