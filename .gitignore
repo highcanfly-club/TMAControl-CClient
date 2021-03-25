@@ -71,7 +71,11 @@ xcuserdata/
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
 
 config.log
-
+aclocal.m4
+depcomp
+compile
+install-sh
+missing
 
 ## Gcc Patch
 /*.gcno
