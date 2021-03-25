@@ -76,6 +76,7 @@ depcomp
 compile
 install-sh
 missing
+config.h.in
 
 ## Gcc Patch
 /*.gcno

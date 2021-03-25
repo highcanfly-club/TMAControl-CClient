@@ -1,7 +1,7 @@
 AUTOMAKE_OPTIONS = subdir-objects
-LIBS = -lcrypto -lssl -lcurl -lao -lmpg123
+LIBS += -lcrypto -lssl
 tmaClient_CFLAGS = $(OPENSSL_INCLUDES)
 tmaClient_LDFLAGS = $(OPENSSL_LDFLAGS) 
 bin_PROGRAMS = tmaClient
 
-tmaClient_SOURCES = signatureCheck.c playMessage.c cJSON/cJSON.h cJSON/cJSON.c tmaClient.c playMessage.h 
+tmaClient_SOURCES = signatureCheck.c playMessage.c cJSON/cJSON.h cJSON/cJSON.c tmaClient.c playMessage.h ptt.c ptt.h

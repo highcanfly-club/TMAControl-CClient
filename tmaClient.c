@@ -13,6 +13,7 @@
 #include "cJSON/cJSON.h"
 #include "signatureCheck.h"
 #include "playMessage.h"
+#include "ptt.h"
 
 struct string {
     char *ptr;
@@ -44,6 +45,8 @@ int main(int argc, char *argv[])
         return -1;
     }
     
+    push_to_talk_setup();
+
     curl = curl_easy_init();
     assert(curl);
     
@@ -106,7 +109,10 @@ int main(int argc, char *argv[])
     fprintf(stdout,"signature: %s\n",_signature->valuestring);
     fprintf(stdout,"uuid: %s\n",_uuid->valuestring);
     fprintf(stdout,"timestamp: %s\n",_timestamp->valuestring);
+
+    push_to_talk_on();
     playMessage(_uuid->valuestring);
+    push_to_talk_off();
     free(bsignature);
     return 0;
 }
