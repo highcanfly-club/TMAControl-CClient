@@ -126,7 +126,7 @@ AC_CHECK_LIB([ao], [ao_open_live], [], [AC_MSG_ERROR([ao_open_live was not found
 dnl Check mpg123:
 AC_CHECK_LIB([mpg123], [mpg123_init], [], [AC_MSG_ERROR([mpg123_init was not found in libmpg123])])
 dnl Check libwiringPi2:
-AC_CHECK_LIB([wiringPi], [digitalWrite], [], [AC_MSG_ERROR([digitalWrite was not found in libwiringPi])])
+AC_CHECK_LIB([wiringPi], [digitalWrite], [], [AC_MSG_NOTICE([digitalWrite was not found in libwiringPi])])
 
 AX_CHECK_OPENSSL()
 
