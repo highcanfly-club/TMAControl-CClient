@@ -96,6 +96,18 @@ AC_DEFUN([AX_CHECK_OPENSSL], [
     AC_SUBST([OPENSSL_LDFLAGS])
 ])
 
+dnl wiringPi pin connected to PTT
+    AC_ARG_WITH([ptt-pin],
+        [AS_HELP_STRING([--with-ptt-pin=29],
+            [wPi pin number where radio PTT is connected, use gpio readall for checkings pins])],
+        [
+            AC_DEFINE_UNQUOTED([PTT_PIN],  $withval  ,[wPi pin connected to PTT])
+        ], [
+            AC_DEFINE_UNQUOTED([PTT_PIN],[ 29 ],[wPi pin connected to PTT (29=physical pin 40 on RPI3b])
+        ]
+        )
+
+
 dnl Sound files location
     AC_ARG_WITH([sound-files],
         [AS_HELP_STRING([--with-sound-files=DIR],
@@ -113,8 +125,9 @@ dnl Check ao:
 AC_CHECK_LIB([ao], [ao_open_live], [], [AC_MSG_ERROR([ao_open_live was not found in libao])])
 dnl Check mpg123:
 AC_CHECK_LIB([mpg123], [mpg123_init], [], [AC_MSG_ERROR([mpg123_init was not found in libmpg123])])
-dnl Check ssl:
-dnl AC_CHECK_LIB([ssl], [PEM_read_bio_RSA_PUBKEY], [], [AC_MSG_ERROR([PEM_read_bio_RSA_PUBKEY was not found in libssl])])
+dnl Check libwiringPi2:
+AC_CHECK_LIB([wiringPi], [digitalWrite], [], [AC_MSG_ERROR([digitalWrite was not found in libwiringPi])])
+
 AX_CHECK_OPENSSL()
 
 AC_CONFIG_HEADERS([config.h])
