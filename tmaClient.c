@@ -91,8 +91,11 @@ int connect_and_process(char *url)
     RSA *rsa = createPublicRSA(sz_cert);
     
     curl_easy_cleanup(curl);
-    if (code != CURLE_OK)
-        return -1;
+        if (code != CURLE_OK)
+        {
+            RSA_free(rsa);
+            return -1;
+        }
 #ifdef DEBUG
     fprintf(stdout,"raw message: %s\n",message.ptr);
 #endif
@@ -114,6 +117,7 @@ int connect_and_process(char *url)
     
         if (!_message){
             fprintf(stderr, "Error secured message not received, is there any server problem or is your URL wrong?\n");
+            RSA_free(rsa);
             return -2;
         }
         
@@ -121,6 +125,7 @@ int connect_and_process(char *url)
         {
             hexstringToBytes(_signature->valuestring, &bsignature, &bsignature_len);}
         else{
+            RSA_free(rsa);
             return -3;
         }
         
@@ -145,6 +150,7 @@ int connect_and_process(char *url)
         if (!authentic){
             fprintf(stderr, "Error signature is wrong.\n");
             if (bsignature) free(bsignature);
+            RSA_free(rsa);
             return -3;
         }
         
@@ -180,6 +186,7 @@ int connect_and_process(char *url)
         }
         cJSON_Delete(json);
     }
+        RSA_free(rsa);
     return 0;
     }
     

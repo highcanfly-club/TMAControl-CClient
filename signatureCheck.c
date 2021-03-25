@@ -24,9 +24,11 @@ RSA* createPublicRSA(const char *key) {
         rsa = EVP_PKEY_get1_RSA(pkey);
         if (rsa )
         {
+            X509_free(x509);
             return rsa;
         }
     }
+    X509_free(x509);
     return NULL;
 }
 
