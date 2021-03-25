@@ -7,6 +7,28 @@ AC_PROG_CC
 AC_PROG_INSTALL
 AC_PROG_MAKE_SET
 
+
+dnl is it a debug build?
+CFLAGS="-O3"
+AC_ARG_ENABLE(debug,
+AS_HELP_STRING([--enable-debug],
+               [enable debugging, default: no]),
+[case "${enableval}" in
+             yes)
+		debug=true
+		CFLAGS="-g -O0"
+		AC_DEFINE_UNQUOTED([DEBUG],  $withval  ,[debug enabled])
+		;;
+             no) 
+		debug=false
+	       CFLAGS="-O3"	
+		;;
+             *)   AC_MSG_ERROR([bad value ${enableval} for --enable-debug]) ;;
+esac],
+[debug=false])
+
+AM_CONDITIONAL(DEBUG, test x"$debug" = x"true")
+
 AU_ALIAS([CHECK_SSL], [AX_CHECK_OPENSSL])
 AC_DEFUN([AX_CHECK_OPENSSL], [
     found=false

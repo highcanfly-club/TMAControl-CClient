@@ -1,5 +1,6 @@
 AUTOMAKE_OPTIONS = subdir-objects
 LIBS += -lcrypto -lssl
+
 tmaClient_CFLAGS = $(OPENSSL_INCLUDES)
 tmaClient_LDFLAGS = $(OPENSSL_LDFLAGS) 
 bin_PROGRAMS = tmaClient

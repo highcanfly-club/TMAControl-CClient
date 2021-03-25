@@ -50,7 +50,9 @@ int main(int argc, char *argv[])
     curl = curl_easy_init();
     assert(curl);
     
-    
+
+// Connect to the server, fill the message with the response and fill the sz_cert with the x509 certificate received
+// if there is a certificate problem libcurl reports it, and close the connection    
     char *sz_cert;
     code = connectToServer(curl, argv[1], &sz_cert, &message);
     if (code != CURLE_OK)
@@ -59,16 +61,30 @@ int main(int argc, char *argv[])
                 curl_easy_strerror(code),
                 error_buffer);
     else
+    {
+#ifdef DEBUG
         fprintf(stderr,"%s",sz_cert);
+#endif
+    }
     RSA *rsa = createPublicRSA(sz_cert);
     
     curl_easy_cleanup(curl);
     if (code != CURLE_OK)
         return -1;
+
+#ifdef DEBUG
     fprintf(stdout,"raw message: %s\n",message.ptr);
+#endif
+
+
+    //parse the response as a json message
     cJSON *json = cJSON_Parse(message.ptr);
+
+
+    //now free the memory
     free(sz_cert);
     free(message.ptr);
+
     const cJSON *_message = NULL;
     const cJSON *_timestamp = NULL;
     const cJSON *_signature = NULL;
@@ -79,7 +95,11 @@ int main(int argc, char *argv[])
     unsigned char *bsignature;
     size_t bsignature_len;
     
+    //convert the json hextring sequence to a real openssl signature
     hexstringToBytes(_signature->valuestring, &bsignature, &bsignature_len);
+
+
+    // keeps this debug code if I need more testing
     // modify the signature for getting a wrong one (in fact if 32th byte is 6……
     //*(bsignature+32)=6;
     //    printf("0x");
@@ -92,6 +112,12 @@ int main(int argc, char *argv[])
         fprintf(stderr, "Error secured message not received, is there any server problem or is your URL wrong?\n");
         return -2;
     }
+
+    // TODO
+    // check timestamp
+    //
+
+    // Now it's time to check the message
     int authentic;
     RSAVerifySignature( rsa,
                        bsignature,
@@ -103,12 +129,16 @@ int main(int argc, char *argv[])
         fprintf(stderr, "Error signature is wrong.\n");
         return -3;
     }
+
+    // Message is authentic (ie. certificate is OK and message signature is OK) so we can read the uuid and play the message over the air
     cJSON *json_2nd_level = cJSON_Parse(_message->valuestring);
     _timestamp = cJSON_GetObjectItemCaseSensitive(json_2nd_level, "timestamp");
     _uuid = cJSON_GetObjectItemCaseSensitive(json_2nd_level, "uuid");
+#ifdef DEBUG
     fprintf(stdout,"signature: %s\n",_signature->valuestring);
     fprintf(stdout,"uuid: %s\n",_uuid->valuestring);
     fprintf(stdout,"timestamp: %s\n",_timestamp->valuestring);
+#endif
 
     push_to_talk_on();
     playMessage(_uuid->valuestring);
