@@ -133,7 +133,7 @@ dnl wiringPi pin connected to radio relay
         [
             AC_DEFINE_UNQUOTED([POWER_PIN],  $withval  ,[wPi pin connected to power relay])
         ], [
-            AC_DEFINE_UNQUOTED([PTT_PIN],[ 28 ],[wPi pin connected to PTT (28=physical pin 38 on RPI3b])
+            AC_DEFINE_UNQUOTED([POWER_PIN],[ 28 ],[wPi pin connected to PTT (28=physical pin 38 on RPI3b])
         ]
         )
 
