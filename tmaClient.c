@@ -13,7 +13,9 @@
 #include "cJSON/cJSON.h"
 #include "signatureCheck.h"
 #include "playMessage.h"
-#include "ptt.h"
+#include "gpio.h"
+#include <unistd.h>
+
 
 struct string {
     char *ptr;
@@ -31,8 +33,23 @@ void init_string(struct string *s);
 #define MAX_CERTS 20
 X509 *certificate[MAX_CERTS];
 long certificate_error[MAX_CERTS];
+int connect_and_process(char *url);
 
 int main(int argc, char *argv[])
+{
+    if (argc != 2){
+        fprintf(stderr, "Error secured message URL is required perhaps you forgot https://tmalille31.highcanfly.club/tmastatesecuredmessage\n");
+        return -1;
+    }
+  //  while (1)
+    {
+        int ret = connect_and_process(argv[1]);
+   //     usleep(1000);
+    }
+    return 0;
+}
+
+int connect_and_process(char *url)
 {
     struct string message;
     init_string(&message);
@@ -40,10 +57,7 @@ int main(int argc, char *argv[])
     CURL *curl;
     CURLcode code;
     
-    if (argc != 2){
-        fprintf(stderr, "Error secured message URL is required perhaps you forgot https://tmalille31.highcanfly.club/tmastatesecuredmessage\n");
-        return -1;
-    }
+
     
     push_to_talk_setup();
 
@@ -51,70 +65,124 @@ int main(int argc, char *argv[])
     assert(curl);
     
     
-    char *sz_cert;
-    code = connectToServer(curl, argv[1], &sz_cert, &message);
+    char *sz_cert = NULL;
+
+    // Connect to the server, fill the message with the response and fill the sz_cert with the x509 certificate received
+    // if there is a certificate problem libcurl reports it, and close the connection
+
+    code = connectToServer(curl, url, &sz_cert, &message);
     if (code != CURLE_OK)
+    {
         fprintf(stderr, "Error %u: %s\n%s\n",
                 code,
                 curl_easy_strerror(code),
                 error_buffer);
+        curl_easy_cleanup(curl);
+        free(sz_cert);
+        free(message.ptr);
+        message.len=0;
+        return -10;
+    }
     else
+    {
+#ifdef DEBUG
         fprintf(stderr,"%s",sz_cert);
+#endif
     RSA *rsa = createPublicRSA(sz_cert);
     
     curl_easy_cleanup(curl);
     if (code != CURLE_OK)
         return -1;
+#ifdef DEBUG
     fprintf(stdout,"raw message: %s\n",message.ptr);
+#endif
     cJSON *json = cJSON_Parse(message.ptr);
-    free(sz_cert);
-    free(message.ptr);
-    const cJSON *_message = NULL;
-    const cJSON *_timestamp = NULL;
-    const cJSON *_signature = NULL;
-    const cJSON *_uuid = NULL;
-    _message = cJSON_GetObjectItemCaseSensitive(json, "message");
-    _signature = cJSON_GetObjectItemCaseSensitive(json, "signature");
-    
-    unsigned char *bsignature;
-    size_t bsignature_len;
-    
-    hexstringToBytes(_signature->valuestring, &bsignature, &bsignature_len);
-    // modify the signature for getting a wrong one (in fact if 32th byte is 6……
-    //*(bsignature+32)=6;
-    //    printf("0x");
-    //    for(size_t count = 0; count < strlen(_signature->valuestring)/2; count++)
-    //        printf("%02x", bsignature[count]);
-    //    printf("\n");
-    
-    
-    if (!_message){
-        fprintf(stderr, "Error secured message not received, is there any server problem or is your URL wrong?\n");
-        return -2;
-    }
-    int authentic;
-    RSAVerifySignature( rsa,
-                       bsignature,
-                       bsignature_len,
-                       _message->valuestring,
-                       strlen(_message->valuestring),
-                       &authentic);
-    if (!authentic){
-        fprintf(stderr, "Error signature is wrong.\n");
-        return -3;
-    }
-    cJSON *json_2nd_level = cJSON_Parse(_message->valuestring);
-    _timestamp = cJSON_GetObjectItemCaseSensitive(json_2nd_level, "timestamp");
-    _uuid = cJSON_GetObjectItemCaseSensitive(json_2nd_level, "uuid");
-    fprintf(stdout,"signature: %s\n",_signature->valuestring);
-    fprintf(stdout,"uuid: %s\n",_uuid->valuestring);
-    fprintf(stdout,"timestamp: %s\n",_timestamp->valuestring);
 
-    push_to_talk_on();
-    playMessage(_uuid->valuestring);
-    push_to_talk_off();
-    free(bsignature);
+    free(sz_cert);
+    free(message.ptr); message.len=0;
+    
+    if (json)
+    {
+        const cJSON *_message = NULL;
+        const cJSON *_signature = NULL;
+        
+        _message = cJSON_GetObjectItemCaseSensitive(json, "message");
+        _signature = cJSON_GetObjectItemCaseSensitive(json, "signature");
+        
+        unsigned char *bsignature = NULL;
+        size_t bsignature_len;
+    
+        if (!_message){
+            fprintf(stderr, "Error secured message not received, is there any server problem or is your URL wrong?\n");
+            return -2;
+        }
+        
+        if(_signature)
+        {
+            hexstringToBytes(_signature->valuestring, &bsignature, &bsignature_len);}
+        else{
+            return -3;
+        }
+        
+        // keeps this debug code if I need more testing
+        // modify the signature for getting a wrong one (in fact if 32th byte is 6……
+        //*(bsignature+32)=6;
+        //    printf("0x");
+        //    for(size_t count = 0; count < strlen(_signature->valuestring)/2; count++)
+        //        printf("%02x", bsignature[count]);
+        //    printf("\n");
+        
+        
+        
+        // Now it's time to check the message
+        int authentic;
+        RSAVerifySignature( rsa,
+                           bsignature,
+                           bsignature_len,
+                           _message->valuestring,
+                           strlen(_message->valuestring),
+                           &authentic);
+        if (!authentic){
+            fprintf(stderr, "Error signature is wrong.\n");
+            if (bsignature) free(bsignature);
+            return -3;
+        }
+        
+        const cJSON *json_2nd_level = NULL;
+        json_2nd_level = cJSON_Parse(_message->valuestring);
+        if (json_2nd_level)
+        {
+            const cJSON *_timestamp = NULL;
+            const cJSON *_uuid = NULL;
+            _timestamp = cJSON_GetObjectItemCaseSensitive(json_2nd_level, "timestamp");
+            _uuid = cJSON_GetObjectItemCaseSensitive(json_2nd_level, "uuid");
+            if (_timestamp && _uuid)
+            {   // TODO
+                // check timestamp
+                //
+#ifdef DEBUG
+                fprintf(stdout,"signature: %s\n",_signature->valuestring);
+                fprintf(stdout,"uuid: %s\n",_uuid->valuestring);
+                fprintf(stdout,"timestamp: %s\n",_timestamp->valuestring);
+#endif
+                
+                push_to_talk_on();
+                playMessage(_uuid->valuestring);
+                push_to_talk_off();
+            }
+            cJSON_Delete((cJSON *)json_2nd_level);
+            
+        }
+        if (bsignature)
+        {
+            free(bsignature);
+            
+        }
+        cJSON_Delete(json);
+    }
     return 0;
+    }
+    
 }
 
 void init_string(struct string *s) {

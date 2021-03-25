@@ -7,6 +7,25 @@ AC_PROG_CC
 AC_PROG_INSTALL
 AC_PROG_MAKE_SET
 
+dnl is it a debug build?
+CFLAGS="-O3"
+AC_ARG_ENABLE(debug,
+AS_HELP_STRING([--enable-debug],
+               [enable debugging, default: no]),
+[case "${enableval}" in
+             yes)
+		debug=true
+		CFLAGS="-g -O0"
+		AC_DEFINE_UNQUOTED([DEBUG],  $withval  ,[debug enabled])
+		;;
+             no) 
+		debug=false
+	       CFLAGS="-O3"	
+		;;
+             *)   AC_MSG_ERROR([bad value ${enableval} for --enable-debug]) ;;
+esac],
+[debug=false])
+
 AU_ALIAS([CHECK_SSL], [AX_CHECK_OPENSSL])
 AC_DEFUN([AX_CHECK_OPENSSL], [
     found=false
@@ -107,6 +126,16 @@ dnl wiringPi pin connected to PTT
         ]
         )
 
+dnl wiringPi pin connected to radio relay
+    AC_ARG_WITH([power-pin],
+        [AS_HELP_STRING([--with-power-pin=28],
+            [wPi pin number where radio power relay is connected, use gpio readall for checkings pins])],
+        [
+            AC_DEFINE_UNQUOTED([POWER_PIN],  $withval  ,[wPi pin connected to power relay])
+        ], [
+            AC_DEFINE_UNQUOTED([PTT_PIN],[ 28 ],[wPi pin connected to PTT (28=physical pin 38 on RPI3b])
+        ]
+        )
 
 dnl Sound files location
     AC_ARG_WITH([sound-files],

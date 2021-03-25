@@ -5,11 +5,33 @@
 //  Created by Ronan LE MEILLAT on 25/03/2021.
 //
 //
-#include "ptt.h"
+#include "gpio.h"
 #include <stdio.h>
 #ifdef HAVE_LIBWIRINGPI
 #include <wiringPi.h>
 #endif
+
+int power_on_radio(){
+#ifdef HAVE_LIBWIRINGPI	
+		wiringPiSetup();
+		pinMode(PTT_PIN, OUTPUT);
+		digitalWrite(PTT_PIN,HIGH);
+		return 0;
+#else
+        fprintf(stderr,"NO GPIO Found install libwiringPi\n");
+        return -1;
+#endif
+}
+
+int power_off_radio(){
+#ifdef HAVE_LIBWIRINGPI	
+		digitalWrite(PTT_PIN,LOW);
+		return 0;
+#else
+        fprintf(stderr,"NO GPIO Found install libwiringPi\n");
+        return -1;
+#endif
+}
 
 int push_to_talk_setup(){
 #ifdef HAVE_LIBWIRINGPI

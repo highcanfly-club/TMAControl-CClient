@@ -11,6 +11,7 @@
 		AC704285260333E000293796 /* playMessage.c in Sources */ = {isa = PBXBuildFile; fileRef = AC704284260333E000293796 /* playMessage.c */; };
 		AC70428D260356FA00293796 /* cJSON.c in Sources */ = {isa = PBXBuildFile; fileRef = AC70428C260356FA00293796 /* cJSON.c */; };
 		AC71034926024EDE00A0C5B2 /* tmaClient.c in Sources */ = {isa = PBXBuildFile; fileRef = AC71034826024EDE00A0C5B2 /* tmaClient.c */; };
+		ACEC7D50260CDC2B00F1BB35 /* gpio.c in Sources */ = {isa = PBXBuildFile; fileRef = ACEC7D4F260CDC2B00F1BB35 /* gpio.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,6 +36,8 @@
 		AC70428C260356FA00293796 /* cJSON.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = cJSON.c; path = cJSON/cJSON.c; sourceTree = "<group>"; };
 		AC71034526024EDE00A0C5B2 /* TMAControl-CClient */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "TMAControl-CClient"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC71034826024EDE00A0C5B2 /* tmaClient.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = tmaClient.c; sourceTree = "<group>"; };
+		ACEC7D4E260CDC2B00F1BB35 /* gpio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gpio.h; sourceTree = "<group>"; };
+		ACEC7D4F260CDC2B00F1BB35 /* gpio.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gpio.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +70,8 @@
 		AC71034726024EDE00A0C5B2 /* TMAControl-CClient */ = {
 			isa = PBXGroup;
 			children = (
+				ACEC7D4F260CDC2B00F1BB35 /* gpio.c */,
+				ACEC7D4E260CDC2B00F1BB35 /* gpio.h */,
 				AC1785982607BA4D0061C4F8 /* config.h */,
 				AC35CDBE2604E7F7004C907C /* signatureCheck.c */,
 				AC35CDBD2604E7F7004C907C /* signatureCheck.h */,
@@ -135,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACEC7D50260CDC2B00F1BB35 /* gpio.c in Sources */,
 				AC70428D260356FA00293796 /* cJSON.c in Sources */,
 				AC35CDBF2604E7F7004C907C /* signatureCheck.c in Sources */,
 				AC704285260333E000293796 /* playMessage.c in Sources */,

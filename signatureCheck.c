@@ -66,17 +66,21 @@ int RSAVerifySignature( RSA* rsa,
         return 0;
     }
     int AuthStatus = EVP_DigestVerifyFinal(m_RSAVerifyCtx, MsgHash, MsgHashLen);
+    
+    EVP_PKEY_free(pubKey);
+    EVP_MD_CTX_free(m_RSAVerifyCtx);
+    
     if (AuthStatus==1) {
         *Authentic = 1;
-        EVP_MD_CTX_free(m_RSAVerifyCtx);
+        
         return 1;
     } else if(AuthStatus==0){
         *Authentic = 0;
-        EVP_MD_CTX_free(m_RSAVerifyCtx);
+
         return 0;
     } else{
         *Authentic = 0;
-        EVP_MD_CTX_free(m_RSAVerifyCtx);
+
         return 0;
     }
 }

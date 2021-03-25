@@ -17,6 +17,9 @@
                              |
   Radio GND #7 <---- 10kΩ ---+-- 10kΩ -->radio +12V (pull up resistor to 6V via simple divider low drain 0.6mA) 
 </pre>
+  powering the Motorola radio is done via RPi pin #38 (GPIO.28) and a 12v relay drived via a NPN transistor, this is for avoiding to stay on emission in case of a crash (PTT is active low). So a crash on the RPi side can turn on the PTT.
+  But with the security relay, if the rPi crash, the watchdog will reboot the Pi and the GPIO will be reset to 0 so the radio will be turn off. If app restarts, the PTT will be rise high and the radio will be turned on.
+
 ## getting from github
 ```bash
 git clone --recursive https://github.com/eltorio/TMAControl-CClient.git
