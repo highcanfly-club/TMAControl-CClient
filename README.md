@@ -1,6 +1,22 @@
 # TMAControl-CClient
 
 # Installation
+  First of all you must have your Raspberry Pi computer up and connected to the Internet. There are plenty of tutorials for doing that. You can connect to the network via ethernet (easy), wifi, gprs/umts/lte or via exotic methods. 
+  
+  I use Ubuntu Server 20.04.2 LTS but with some minor adjustments it can work with any distro.
+  Why this distro ? Because it is a long term supported version, security holes are rapidly treated and… because I use it everywhere !
+
+  I use a Motorola professional VHF
+  3.5mm audio output is connected to the accessory port pin #2 (Audio In 80mV RMS) and pin #7 (GND)
+  rpi3b+ pin #40 (GPIO.29) is conencted via a Sharp PC817c optoisolator to accessory pin #3 (active low)
+  <pre>
+  PC817c #1 ->1kΩ-> RPI #40
+  PC817c #2 -> RPI GND #39
+  PC817c (emitter) #3   <---------------> Accessory #7 (Radio GND)
+  PC817c (collector) #4 <----+----------> Accessory #3 (PTT active low)
+                             |
+  Radio GND #7 <---- 10kΩ ---+-- 10kΩ -->radio +12V (pull up resistor to 6V via simple divider low drain 0.6mA) 
+</pre>
 ## getting from github
 ```bash
 git clone --recursive https://github.com/eltorio/TMAControl-CClient.git
@@ -10,12 +26,13 @@ git clone --recursive git@github.com:eltorio/TMAControl-CClient.git
 ## building on macos
 ```bash
 brew install openssl ao mpg123
-autoreconf --install --force && ./configure --with-openssl=/usr/local/opt/openssl --with-sound-files=`pwd`/sounds/ && make
+autoreconf --install --force && ./configure --with-openssl=/usr/local/opt/openssl --with-sound-files=`pwd`/sounds/ --enable-debug && make
 ./tmaClient  https://tmalille31.highcanfly.club/tmastatesecuredmessage
 ```
 ## building on Raspberry pi (Ubuntu Server 20.04.2 LTS)
-  Default PTT pin numbered wPI=29 (physical 40 on Pi3b), use: 
+  Default PTT pin numbered wPI=29 (physical 40 on RPi3b+), use gpio readall command for getting correct numbering (wPi column) : 
 ```bash
+#on a Raspberry Pi 3b+
 gpio readall
  +-----+-----+---------+------+---+---Pi 3B+-+---+------+---------+-----+-----+
  | BCM | wPi |   Name  | Mode | V | Physical | V | Mode | Name    | wPi | BCM |
@@ -44,13 +61,25 @@ gpio readall
  | BCM | wPi |   Name  | Mode | V | Physical | V | Mode | Name    | wPi | BCM |
  +-----+-----+---------+------+---+---Pi 3B+-+---+------+---------+-----+-----+
 ```
-for getting correct numbering (wPi column) 
+
  
 ```bash
 git clone --recursive https://github.com/eltorio/TMAControl-CClient.git
 mkdir -p /usr/local/share/TMAControl-CCLient/sounds
 cp sounds/* /usr/local/share/TMAControl-CCLient/sounds/
-sudo apt -y install make gcc autoconf libcurl4-openssl-dev libao-dev libmpg123-dev libssl-dev libwiringpi-dev wiringpi
+sudo apt -y install make gcc autoconf libcurl4-openssl-dev libao-dev libmpg123-dev libssl-dev libwiringpi-dev wiringpi alsa-utils
 autoreconf --install --force && ./configure --with-openssl=/usr --with-sound-files=/usr/local/share/TMAControl-CCLient/sounds/ --with-ptt-pin=29 && make
 ./tmaClient  https://tmalille31.highcanfly.club/tmastatesecuredmessage
 ```
+
+## security
+  * first : if the certificate is not coming from an authority agreed on the client, libcurl reports the error
+  ```bash
+./tmaClient https://tmalille31.highcanfly.club/tmastatesecuredmessage
+Error 60: SSL peer certificate or SSH remote key was not OK
+SSL certificate problem: self signed certificate in certificate chain
+````
+  * second : if the message signature is not OK, for example the message has been altered, or signed with another key (key must be the same as the certificate)
+  the error is reported
+
+  * finally : the timestamp of the message is checked for testing it is useful to use --enable-debug flag in configure, it will show some useful messages. But for production without the flag the binary will be smaller and faster.
