@@ -12,6 +12,7 @@
 		AC70428D260356FA00293796 /* cJSON.c in Sources */ = {isa = PBXBuildFile; fileRef = AC70428C260356FA00293796 /* cJSON.c */; };
 		AC71034926024EDE00A0C5B2 /* tmaClient.c in Sources */ = {isa = PBXBuildFile; fileRef = AC71034826024EDE00A0C5B2 /* tmaClient.c */; };
 		ACEC7D50260CDC2B00F1BB35 /* gpio.c in Sources */ = {isa = PBXBuildFile; fileRef = ACEC7D4F260CDC2B00F1BB35 /* gpio.c */; };
+		ACEC7D54260E35BC00F1BB35 /* date_parse.c in Sources */ = {isa = PBXBuildFile; fileRef = ACEC7D53260E35BC00F1BB35 /* date_parse.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -38,6 +39,8 @@
 		AC71034826024EDE00A0C5B2 /* tmaClient.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = tmaClient.c; sourceTree = "<group>"; };
 		ACEC7D4E260CDC2B00F1BB35 /* gpio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gpio.h; sourceTree = "<group>"; };
 		ACEC7D4F260CDC2B00F1BB35 /* gpio.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gpio.c; sourceTree = "<group>"; };
+		ACEC7D52260E35BC00F1BB35 /* date_parse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = date_parse.h; sourceTree = "<group>"; };
+		ACEC7D53260E35BC00F1BB35 /* date_parse.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = date_parse.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +83,8 @@
 				AC71034826024EDE00A0C5B2 /* tmaClient.c */,
 				AC704283260333E000293796 /* playMessage.h */,
 				AC704284260333E000293796 /* playMessage.c */,
+				ACEC7D52260E35BC00F1BB35 /* date_parse.h */,
+				ACEC7D53260E35BC00F1BB35 /* date_parse.c */,
 			);
 			name = "TMAControl-CClient";
 			sourceTree = "<group>";
@@ -141,6 +146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACEC7D50260CDC2B00F1BB35 /* gpio.c in Sources */,
+				ACEC7D54260E35BC00F1BB35 /* date_parse.c in Sources */,
 				AC70428D260356FA00293796 /* cJSON.c in Sources */,
 				AC35CDBF2604E7F7004C907C /* signatureCheck.c in Sources */,
 				AC704285260333E000293796 /* playMessage.c in Sources */,

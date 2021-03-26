@@ -12,7 +12,7 @@
 RSA* createPublicRSA(const char *key) {
     X509 *x509 = NULL;
     RSA *rsa = NULL;
-    EVP_PKEY *pkey = NULL;
+ //   EVP_PKEY *pkey = NULL;
     
     BIO *certbio = BIO_new_mem_buf((void*)key, -1);
     if (certbio==NULL) {
@@ -20,8 +20,7 @@ RSA* createPublicRSA(const char *key) {
     }
     if( PEM_read_bio_X509(certbio, &x509,NULL, NULL) )
     {
-        pkey = X509_get_pubkey(x509);
-        rsa = EVP_PKEY_get1_RSA(pkey);
+        rsa = EVP_PKEY_get1_RSA(X509_get_pubkey(x509));
         if (rsa )
         {
             X509_free(x509);

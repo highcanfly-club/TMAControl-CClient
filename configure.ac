@@ -148,6 +148,17 @@ dnl Sound files location
         ]
         )
 
+dnl MAX_Δt
+    AC_ARG_WITH([max-dt],
+        [AS_HELP_STRING([--with-max-dt=300],
+            [maximum Δt beetween timestamp in message and local  time in seconds default to 300])],
+        [
+            AC_DEFINE_UNQUOTED([MAX_DT],  $withval  ,[maximum Δt beetween timestamp in message and local time in seconds default to 300])
+        ], [
+            AC_DEFINE_UNQUOTED([MAX_DT],[ 300 ],[maximum Δt beetween timestamp in message and local time in seconds default to 300])
+        ]
+        )
+
 dnl Check curl:
 AC_CHECK_LIB([curl], [curl_easy_setopt], [], [AC_MSG_ERROR([curl_easy_setopt was not found in libcurl])])
 dnl Check ao:
