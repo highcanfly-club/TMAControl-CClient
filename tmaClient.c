@@ -46,18 +46,20 @@ int main(int argc, char *argv[])
         if ( strncmp( argv[1], HTTPS_URL, strlen(HTTPS_URL) ) == 0 )
         {
             int ret = connect_and_process(argv[1]);
+            if (ret != E_SUCCESS)
+                fprintf(stderr,"%s\n",errordesc[-ret].message);
             return 0;
         }
         else
         {
             fprintf(stderr, "%s\n", errordesc[-E_HTTPS_REQUIRED].message);
-            return errordesc[-E_HTTPS_REQUIRED].code;
+            return E_HTTPS_REQUIRED;
         }
     }
     else
     {
         fprintf(stderr, "%s\n",errordesc[-E_NO_URL].message);
-        return errordesc[-E_NO_URL].code;
+        return E_NO_URL;
     }
 
 }
@@ -121,14 +123,17 @@ int connect_and_process(char *url)
 #endif
                 
                         hexstringToBytes(_signature->valuestring, &bsignature, &bsignature_len);
+#ifndef FAKE_SIGNATURE
                         // keeps this debug code if I need more testing
                         // modify the signature for getting a wrong one (in fact if 32th byte is 6……
-                        //*(bsignature+32)=6;
-                        //    printf("0x");
-                        //    for(size_t count = 0; count < strlen(_signature->valuestring)/2; count++)
-                        //        printf("%02x", bsignature[count]);
-                        //    printf("\n");
-                        
+                        *(bsignature+32)=6;
+#endif
+#ifdef DEBUG
+                            printf("Decoded signature: 0x");
+                            for(size_t count = 0; count < strlen(_signature->valuestring)/2; count++)
+                                printf("%02x", bsignature[count]);
+                            printf("\n");
+#endif
                         
                         
                         // Now it's time to check the message
@@ -185,63 +190,55 @@ int connect_and_process(char *url)
                                         {
                                             cJSON_Delete(json_2nd_level);
                                             cJSON_Delete(json);
-                                            fprintf(stderr, "%s\n",errordesc[-E_NO_UUID].message);
-                                            return errordesc[-E_NO_UUID].code;
+                                            return E_NO_UUID;
                                         }
                                     }
                                     else // if (abs(Δt) < MAX_DT )
                                     {
                                         cJSON_Delete(json_2nd_level);
                                         cJSON_Delete(json);
-                                        fprintf(stderr, "%s.\n",errordesc[-E_DT_ERROR].message);
-                                        return errordesc[-E_DT_ERROR].code;
+                                        return E_DT_ERROR;
                                     }
                                 }
                                 else // if (_timestamp && _uuid)
                                 {
                                     cJSON_Delete(json_2nd_level);
                                     cJSON_Delete(json);
-                                    fprintf(stderr, "%s.\n",errordesc[-E_NO_TIMESTAMP_MESSAGE].message);
-                                    return errordesc[-E_NO_TIMESTAMP_MESSAGE].code;
+                                    return E_NO_TIMESTAMP_MESSAGE;
                                 }
                                                                 
                             }
                             else // if (json_2nd_level)
                             {
                                 cJSON_Delete(json);
-                                fprintf(stderr, "%s.\n",errordesc[-E_NO_JSON_INNER].message);
-                                return errordesc[-E_NO_JSON_INNER].code; // if (json_2nd_level)
+                                return E_NO_JSON_INNER;
                             }
 
                         }
                         else        // if (authentic)
                         {
                             cJSON_Delete(json);
-                            fprintf(stderr, "%s.\n",errordesc[-E_WRONG_SIGNATURE].message);
-                            return errordesc[-E_WRONG_SIGNATURE].code; // if (authentic)
+                            return E_WRONG_SIGNATURE; // if (authentic)
                         }
                     }
                     else // if(_signature)
                     {
                         cJSON_Delete(json);
                         if (rsa) RSA_free(rsa);
-                        fprintf(stderr, "%s.\n",errordesc[-E_NO_SIGNATURE_ERROR].message);
-                        return errordesc[-E_NO_SIGNATURE_ERROR].code; // if(_signature)
+                        return E_NO_SIGNATURE_ERROR; // if(_signature)
                     }
                 }
                 else    //if (_message)
                 {
                     cJSON_Delete(json);
-                    fprintf(stderr, "%s, is there any server problem or is your URL wrong?\n",errordesc[-E_MESSAGE_NOT_RECEIVED].message);
                     if (rsa) RSA_free(rsa);
-                    return errordesc[-E_MESSAGE_NOT_RECEIVED].code; //if (_message)
+                    return E_MESSAGE_NOT_RECEIVED; //if (_message)
                 }
                 
             }
             else // if(json)
             {
-                fprintf(stderr, "%s.\n",errordesc[-E_JSON_ERROR].message);
-                return errordesc[-E_JSON_ERROR].code;// if(json)
+                return E_JSON_ERROR;// if(json)
             }
         }
         else   //if (rsa)
@@ -249,8 +246,7 @@ int connect_and_process(char *url)
             free(sz_cert);
             free(message.ptr);
             message.len=0;
-            fprintf(stderr, "%s.\n",errordesc[-E_RSA_ERROR].message);
-            return errordesc[-E_RSA_ERROR].code;
+            return E_RSA_ERROR;
         }
     }
     else  //connectToServer == CURLE_OK
@@ -264,7 +260,7 @@ int connect_and_process(char *url)
         free(sz_cert);
         free(message.ptr);
         message.len=0;
-        return errordesc[-E_CONNECTION_ERROR].code;
+        return E_CONNECTION_ERROR;
     }
     
 }
