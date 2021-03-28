@@ -16,6 +16,7 @@
 #include "gpio.h"
 #include <unistd.h>
 #include "date_parse.h"
+#include "tmaClient.h"
 
 #define HTTPS_URL "https://"
 
@@ -49,14 +50,14 @@ int main(int argc, char *argv[])
         }
         else
         {
-            fprintf(stderr, "Error secured message URL is required, yours doesn't seem to be an https:// url\n");
-            return -2;
+            fprintf(stderr, "%s\n", errordesc[-E_HTTPS_REQUIRED].message);
+            return errordesc[-E_HTTPS_REQUIRED].code;
         }
     }
     else
     {
-        fprintf(stderr, "Error secured message URL is required perhaps you forgot https://tmalille31.highcanfly.club/tmastatesecuredmessage\n");
-        return -1;
+        fprintf(stderr, "%s\n",errordesc[-E_NO_URL].message);
+        return errordesc[-E_NO_URL].code;
     }
 
 }
@@ -184,63 +185,63 @@ int connect_and_process(char *url)
                                         {
                                             cJSON_Delete(json_2nd_level);
                                             cJSON_Delete(json);
-                                            fprintf(stderr, "Don't see uuid in inner json message.\n");
-                                            return -11;
+                                            fprintf(stderr, "%s\n",errordesc[-E_NO_UUID].message);
+                                            return errordesc[-E_NO_UUID].code;
                                         }
                                     }
                                     else // if (abs(Δt) < MAX_DT )
                                     {
                                         cJSON_Delete(json_2nd_level);
                                         cJSON_Delete(json);
-                                        fprintf(stderr, "Δt too important.\n");
-                                        return -10;
+                                        fprintf(stderr, "%s.\n",errordesc[-E_DT_ERROR].message);
+                                        return errordesc[-E_DT_ERROR].code;
                                     }
                                 }
                                 else // if (_timestamp && _uuid)
                                 {
                                     cJSON_Delete(json_2nd_level);
                                     cJSON_Delete(json);
-                                    fprintf(stderr, "Don't see timestamp in inner json message.\n");
-                                    return -9;
+                                    fprintf(stderr, "%s.\n",errordesc[-E_NO_TIMESTAMP_MESSAGE].message);
+                                    return errordesc[-E_NO_TIMESTAMP_MESSAGE].code;
                                 }
                                                                 
                             }
                             else // if (json_2nd_level)
                             {
                                 cJSON_Delete(json);
-                                fprintf(stderr, "Don't see inner json in message.\n");
-                                return -8; // if (json_2nd_level)
+                                fprintf(stderr, "%s.\n",errordesc[-E_NO_JSON_INNER].message);
+                                return errordesc[-E_NO_JSON_INNER].code; // if (json_2nd_level)
                             }
 
                         }
                         else        // if (authentic)
                         {
                             cJSON_Delete(json);
-                            fprintf(stderr, "Error signature is wrong.\n");
-                            return -7; // if (authentic)
+                            fprintf(stderr, "%s.\n",errordesc[-E_WRONG_SIGNATURE].message);
+                            return errordesc[-E_WRONG_SIGNATURE].code; // if (authentic)
                         }
                     }
                     else // if(_signature)
                     {
                         cJSON_Delete(json);
                         if (rsa) RSA_free(rsa);
-                        fprintf(stderr, "Don't see signature in message.\n");
-                        return -6; // if(_signature)
+                        fprintf(stderr, "%s.\n",errordesc[-E_NO_SIGNATURE_ERROR].message);
+                        return errordesc[-E_NO_SIGNATURE_ERROR].code; // if(_signature)
                     }
                 }
                 else    //if (_message)
                 {
                     cJSON_Delete(json);
-                    fprintf(stderr, "Error secured message not received, is there any server problem or is your URL wrong?\n");
+                    fprintf(stderr, "%s, is there any server problem or is your URL wrong?\n",errordesc[-E_MESSAGE_NOT_RECEIVED].message);
                     if (rsa) RSA_free(rsa);
-                    return -5; //if (_message)
+                    return errordesc[-E_MESSAGE_NOT_RECEIVED].code; //if (_message)
                 }
                 
             }
             else // if(json)
             {
-                fprintf(stderr, "Can't decode json message.\n");
-                return -4;// if(json)
+                fprintf(stderr, "%s.\n",errordesc[-E_JSON_ERROR].message);
+                return errordesc[-E_JSON_ERROR].code;// if(json)
             }
         }
         else   //if (rsa)
@@ -248,12 +249,14 @@ int connect_and_process(char *url)
             free(sz_cert);
             free(message.ptr);
             message.len=0;
-            return -3;
+            fprintf(stderr, "%s.\n",errordesc[-E_RSA_ERROR].message);
+            return errordesc[-E_RSA_ERROR].code;
         }
     }
     else  //connectToServer == CURLE_OK
     {
-        fprintf(stderr, "Can't connect to server Error %u: %s\n%s\n",
+        fprintf(stderr, "%s Error %u: %s\n%s\n",
+                errordesc[-E_CONNECTION_ERROR].message,
                 code,
                 curl_easy_strerror(code),
                 error_buffer);
@@ -261,7 +264,7 @@ int connect_and_process(char *url)
         free(sz_cert);
         free(message.ptr);
         message.len=0;
-        return -10;
+        return errordesc[-E_CONNECTION_ERROR].code;
     }
     
 }
