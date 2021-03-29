@@ -123,7 +123,7 @@ int connect_and_process(char *url)
 #endif
                 
                         hexstringToBytes(_signature->valuestring, &bsignature, &bsignature_len);
-#ifndef FAKE_SIGNATURE
+#ifdef FAKE_SIGNATURE
                         // keeps this debug code if I need more testing
                         // modify the signature for getting a wrong one (in fact if 32th byte is 6……
                         *(bsignature+32)=6;
