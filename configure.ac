@@ -158,6 +158,20 @@ dnl MAX_Δt
             AC_DEFINE_UNQUOTED([MAX_DT],[ 300 ],[maximum Δt beetween timestamp in message and local time in seconds default to 300])
         ]
         )
+dnl use inverted output logic ?
+AC_ARG_ENABLE(inverted-output-logic,
+AS_HELP_STRING([--enable-inverted-output-logic],
+               [enable inverted output logic, default: yes (rember you have a NPN transistor on GPIO so high level on GPIO gives 0V on output)]),
+[case "${enableval}" in
+             yes)
+		inverted=1
+        AC_DEFINE_UNQUOTED([INVERTED_LOGIC],  "1"  ,[inverted logic enabled])
+		;;
+             no) 	     
+		inverted=0
+		;;
+             *)   AC_MSG_ERROR([bad value ${enableval} for --enable-debug]) ;;
+esac],[AC_DEFINE_UNQUOTED([INVERTED_LOGIC],  "1"  ,[inverted logic enabled])])
 
 dnl Check curl:
 AC_CHECK_LIB([curl], [curl_easy_setopt], [], [AC_MSG_ERROR([curl_easy_setopt was not found in libcurl])])

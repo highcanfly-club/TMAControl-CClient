@@ -71,9 +71,12 @@ git clone --recursive https://github.com/eltorio/TMAControl-CClient.git
 mkdir -p /usr/local/share/TMAControl-CCLient/sounds
 cp sounds/* /usr/local/share/TMAControl-CCLient/sounds/
 sudo apt -y install make gcc autoconf libcurl4-openssl-dev libao-dev libmpg123-dev libssl-dev libwiringpi-dev wiringpi alsa-utils
-autoreconf --install --force && ./configure --with-openssl=/usr --with-sound-files=/usr/local/share/TMAControl-CCLient/sounds/ --with-ptt-pin=29 && make
+autoreconf --install --force && ./configure --with-openssl=/usr --with-sound-files=/usr/local/share/TMAControl-CCLient/sounds/ --with-ptt-pin=29 --enable-inverted-output-logic=yes && make
 ./tmaClient  https://tmalille31.highcanfly.club/tmastatesecuredmessage
 ```
+  * Note on --enable-inverted-output-logic=yes/no
+  
+    GPIO.29 is translated from 3.3V logic to 5V logic via a opto-isolator with NPN transistor output so when you put 0V on GPIO.29 raspberry pi you'll get +5V on PC817c pin 3. Note also that Motorola® Maxtrac radios use 0V for PTT radio ON and +5V for PTT radio OFF. So with --enable-inverted-output-logic=yes wich is default radio is in TX mode with GPIO.29=+3.3V and in rx mode GPIO.29=0V
 
 ## security
   * first : if the certificate is not coming from an authority agreed on the client, libcurl reports the error
