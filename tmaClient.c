@@ -166,11 +166,11 @@ int connect_and_process(char *url)
                                     int offset;
                                     parse_date_basic(_timestamp->valuestring, &timestamp, &offset);
                                     timestamp -= offset*3600;
-                                    long Δt = (long)now - (long)timestamp;
+                                    long Dt = (long)now - (long)timestamp;
 #ifdef DEBUG
-                                    fprintf(stdout,"timestamp: %s Δt=%lds\n",_timestamp->valuestring,Δt);
+                                    fprintf(stdout,"timestamp: %s Δt=%lds\n",_timestamp->valuestring,Dt);
 #endif
-                                    if (labs(Δt) < MAX_DT )
+                                    if (labs(Dt) < MAX_DT )
                                     {
                                         if (_uuid)
                                         {
