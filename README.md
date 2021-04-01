@@ -9,14 +9,11 @@
   I use a Motorola professional VHF
   3.5mm audio output is connected to the accessory port pin #2 (Audio In 80mV RMS) and pin #7 (GND)
   rpi3b+ pin #40 (GPIO.29) is conencted via a Sharp PC817c optoisolator to accessory pin #3 (active low)
-  <pre>
-  PC817c #1 ->1kΩ-> RPI #40
-  PC817c #2 -> RPI GND #39
-  PC817c (emitter) #3   <---------------> Accessory #7 (Radio GND)
-  PC817c (collector) #4 <----+----------> Accessory #3 (PTT active low)
-                             |
-  Radio GND #7 <---- 10kΩ ---+-- 10kΩ -->radio +12V (pull up resistor to 6V via simple divider low drain 0.6mA) 
-</pre>
+
+  Orcad Capture Lite (free version) project can be found in hardware sub directory
+
+  ![schematic](https://github.com/eltorio/TMAControl-CClient/blob/main/hardware/screenshot.png?raw=true)
+
   powering the Motorola radio is done via RPi pin #38 (GPIO.28) and a 12v relay drived via a NPN transistor, this is for avoiding to stay on emission in case of a crash (PTT is active low). So a crash on the RPi side can turn on the PTT.
   But with the security relay, if the rPi crash, the watchdog will reboot the Pi and the GPIO will be reset to 0 so the radio will be turn off. If app restarts, the PTT will be rise high and the radio will be turned on.
 
