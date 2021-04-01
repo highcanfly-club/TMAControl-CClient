@@ -1,0 +1,10 @@
+* source TMACONTROL
+.EXTERNAL INPUT GPIO.29
+.EXTERNAL INPUT GPIO.28
+.EXTERNAL INPUT PTT
+X_U1         GPIO.29 0 PTT 0 awbpc816 PARAMS:                                 
+V_V1         N14838 0 5V
+V_V2         GPIO.29 0  
++PULSE 0V 3.3V 0ms 0ms 0ms 5ms 10ms
+R_R4         PTT N14838  4.7k TC=0,0 
+R_R1         GPIO.29 0  10k TC=0,0 

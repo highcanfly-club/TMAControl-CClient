@@ -1,0 +1,50 @@
+
+**** 03/27/21 13:28:48 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Simulate"  [ C:\Users\grona\Documents\TI\TMAControl-PSpiceFiles\SCHEMATIC1\Simulate.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "Simulate.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 20ms 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source TMACONTROL
+.EXTERNAL INPUT GPIO.29
+.EXTERNAL INPUT GPIO.28
+.EXTERNAL INPUT OUT
+X_U1         N14404 0 OUT 0 awbpc816 PARAMS:                                 
+R_R1         GPIO.29 N14404  1k TC=0,0 
+R_R2         OUT N14853  0k TC=0,0 
+-------------------------$
+ERROR(ORPSIM-16144): Value may not be 0
+V_V1         N14838 0 13.5V
+V_V2         GPIO.29 0  
++PULSE 0V 3.3V 0ms 0ms 0ms 5ms 10ms
+R_R3         N14853 N14838  10k TC=0,0 
+R_R4         0 N14853  10k TC=0,0 
+
+**** RESUMING Simulate.cir ****
+.END
+
