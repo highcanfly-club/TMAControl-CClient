@@ -7,6 +7,7 @@
 //
 #include "gpio.h"
 #include <stdio.h>
+#include <unistd.h>
 
 int power_on_radio(){
 #ifdef HAVE_LIBWIRINGPI	
@@ -43,6 +44,7 @@ int push_to_talk_setup(){
 }
 
 int push_to_talk_on(){
+    usleep(PRE_ON*1000);
 #ifdef HAVE_LIBWIRINGPI
 	fprintf(stderr,"Putting pin GPIO.%d to %d\n",PTT_PIN,PTT_ON);
 	digitalWrite(PTT_PIN,PTT_ON); //PTT is active low on Motorola but GPIO is inverted with opto-isolator
@@ -55,6 +57,7 @@ int push_to_talk_on(){
 }
 
 int push_to_talk_off(){
+    usleep(POST_ON*1000);
 #ifdef HAVE_LIBWIRINGPI
 	fprintf(stderr,"Putting pin GPIO.%d to %d\n",PTT_PIN,PTT_OFF);
 	digitalWrite(PTT_PIN,PTT_OFF); //PTT is active low on Motorola but GPIIO is inverted with opti-isolator

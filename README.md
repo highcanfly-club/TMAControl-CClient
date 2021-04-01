@@ -29,7 +29,7 @@ git clone --recursive git@github.com:eltorio/TMAControl-CClient.git
 ## building on macos
 ```bash
 brew install openssl ao mpg123
-autoreconf --install --force && ./configure --with-openssl=/usr/local/opt/openssl --with-sound-files=`pwd`/sounds/ --enable-debug && make
+autoreconf --install --force && ./configure --with-openssl=/usr/local/opt/openssl --with-sound-files=`pwd`/sounds/ --enable-debug --enable-inverted-output-logic=yes --with-pre-on=1000 --with-post-on=250 && make
 ./tmaClient  https://tmalille31.highcanfly.club/tmastatesecuredmessage
 ```
 ## building on Raspberry pi (Ubuntu Server 20.04.2 LTS)
@@ -71,12 +71,17 @@ git clone --recursive https://github.com/eltorio/TMAControl-CClient.git
 mkdir -p /usr/local/share/TMAControl-CCLient/sounds
 cp sounds/* /usr/local/share/TMAControl-CCLient/sounds/
 sudo apt -y install make gcc autoconf libcurl4-openssl-dev libao-dev libmpg123-dev libssl-dev libwiringpi-dev wiringpi alsa-utils
-autoreconf --install --force && ./configure --with-openssl=/usr --with-sound-files=/usr/local/share/TMAControl-CCLient/sounds/ --with-ptt-pin=29 --enable-inverted-output-logic=yes && make
+autoreconf --install --force && ./configure --with-openssl=/usr --with-sound-files=/usr/local/share/TMAControl-CCLient/sounds/ --with-ptt-pin=29 --enable-inverted-output-logic=yes --with-pre-on=1000 -with-post-on=250 && make
 ./tmaClient  https://tmalille31.highcanfly.club/tmastatesecuredmessage
 ```
   * Note on --enable-inverted-output-logic=yes/no
   
     GPIO.29 is translated from 3.3V logic to 5V logic via a opto-isolator with NPN transistor output so when you put 0V on GPIO.29 raspberry pi you'll get +5V on PC817c pin 3. Note also that Motorola® Maxtrac radios use 0V for PTT radio ON and +5V for PTT radio OFF. So with --enable-inverted-output-logic=yes wich is default radio is in TX mode with GPIO.29=+3.3V and in rx mode GPIO.29=0V
+
+  * Configure parameters:
+  * --with-ptt-pin=29 , wiringpi number of the pin used to control the radio PTT
+  * --with-pre-on=1000 -with-post-on=250 time in ms to on the radio beftore and after speaking
+
 
 ## security
   * first : if the certificate is not coming from an authority agreed on the client, libcurl reports the error
@@ -89,3 +94,6 @@ SSL certificate problem: self signed certificate in certificate chain
   the error is reported
 
   * finally : the timestamp of the message is checked for testing it is useful to use --enable-debug flag in configure, it will show some useful messages. But for production without the flag the binary will be smaller and faster.
+
+  ## server
+   * see https://github.com/eltorio/TMAControl

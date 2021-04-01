@@ -148,6 +148,28 @@ dnl Sound files location
         ]
         )
 
+dnl pre-on
+    AC_ARG_WITH([pre-on],
+        [AS_HELP_STRING([--with-pre-on=1000],
+            [number of milliseconds to turn on radio before speaking default to 1000])],
+        [
+            AC_DEFINE_UNQUOTED([PRE_ON],  $withval  ,[number of milliseconds to turn on radio before speaking])
+        ], [
+            AC_DEFINE_UNQUOTED([PRE_ON],[ 1000 ],[number of milliseconds to turn on radio before speaking default to 1000])
+        ]
+        )
+
+dnl post-on
+    AC_ARG_WITH([post-on],
+        [AS_HELP_STRING([--with-post-on=250],
+            [number of milliseconds to turn off radio after speaking default to 250])],
+        [
+            AC_DEFINE_UNQUOTED([POST_ON],  $withval  ,[number of milliseconds to turn off radio after speaking])
+        ], [
+            AC_DEFINE_UNQUOTED([POST_ON],[ 250 ],[number of milliseconds to turn off radio after speaking default to 250])
+        ]
+        )
+
 dnl MAX_Δt
     AC_ARG_WITH([max-dt],
         [AS_HELP_STRING([--with-max-dt=300],
@@ -158,6 +180,7 @@ dnl MAX_Δt
             AC_DEFINE_UNQUOTED([MAX_DT],[ 300 ],[maximum Δt beetween timestamp in message and local time in seconds default to 300])
         ]
         )
+
 dnl use inverted output logic ?
 AC_ARG_ENABLE(inverted-output-logic,
 AS_HELP_STRING([--enable-inverted-output-logic],
