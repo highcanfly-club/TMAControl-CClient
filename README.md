@@ -1,5 +1,8 @@
 # TMAControl-CClient
 
+
+# Balise fonctionnelle
+![schematic](https://github.com/eltorio/TMAControl-CClient/blob/main/hardware/BaliseTMA.jpg?raw=true)
 # Installation
   First of all you must have your Raspberry Pi computer up and connected to the Internet. There are plenty of tutorials for doing that. You can connect to the network via ethernet (easy), wifi, gprs/umts/lte or via exotic methods. 
   
