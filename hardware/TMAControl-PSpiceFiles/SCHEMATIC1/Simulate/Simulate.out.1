@@ -1,7 +1,7 @@
 
-**** 03/27/21 13:28:48 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+**** 04/03/21 19:41:36 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
 
- ** Profile: "SCHEMATIC1-Simulate"  [ C:\Users\grona\Documents\TI\TMAControl-PSpiceFiles\SCHEMATIC1\Simulate.sim ] 
+ ** Profile: "SCHEMATIC1-Simulate"  [ C:\Users\grona\Documents\TMAControl-CClient\hardware\tmacontrol-pspicefiles\schematic1\simulate
 
 
  ****     CIRCUIT DESCRIPTION
@@ -18,7 +18,7 @@
 *Libraries: 
 * Profile Libraries :
 * Local Libraries :
-* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+* From [PSPICE NETLIST] section of C:\Users\grona\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
 .lib "nom.lib" 
 
 *Analysis directives: 
@@ -31,20 +31,26 @@
 
 **** INCLUDING SCHEMATIC1.net ****
 * source TMACONTROL
-.EXTERNAL INPUT GPIO.29
-.EXTERNAL INPUT GPIO.28
-.EXTERNAL INPUT OUT
-X_U1         N14404 0 OUT 0 awbpc816 PARAMS:                                 
-R_R1         GPIO.29 N14404  1k TC=0,0 
-R_R2         OUT N14853  0k TC=0,0 
--------------------------$
-ERROR(ORPSIM-16144): Value may not be 0
-V_V1         N14838 0 13.5V
-V_V2         GPIO.29 0  
+X_U1         GPIO.29.PIN40 GPIO.GND.PIN34 PTT.PIN3 GPIO.GND.PIN34 awbpc816
++  PARAMS:                                 
+R_R2         PTT.PIN3 GPIO.5V  4.7k TC=0,0 
+R_R1         GPIO.29.PIN40 GPIO.GND.PIN34  10k TC=0,0 
+V_V2         GPIO.29.PIN40 GPIO.GND.PIN34  
 +PULSE 0V 3.3V 0ms 0ms 0ms 5ms 10ms
-R_R3         N14853 N14838  10k TC=0,0 
-R_R4         0 N14853  10k TC=0,0 
+V_V1         GPIO.5V GPIO.GND.PIN34 5V
 
 **** RESUMING Simulate.cir ****
 .END
+
+ERROR(ORPSIM-15142): Node PTT.PIN3 is floating
+
+ERROR(ORPSIM-15142): Node GPIO.5V is floating
+
+ERROR(ORPSIM-15142): Node GPIO.29.PIN40 is floating
+
+ERROR(ORPSIM-15142): Node GPIO.GND.PIN34 is floating
+
+ERROR(ORPSIM-15142): Node X_U1.xinstpc816.6 is floating
+
+ERROR(ORPSIM-15142): Node X_U1.xinstpc816.2 is floating
 

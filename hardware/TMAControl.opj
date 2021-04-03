@@ -1,24 +1,10 @@
 (ExpressProject "TMAControl"
   (ProjectVersion "19981106")
-  (SoftwareVersion "17.4-2019 S015 (3921426)  [2/23/2021]-[03/27/21]")
+  (SoftwareVersion "17.4-2019 S015 (3921426)  [2/23/2021]-[04/03/21]")
   (ProjectType "Analog or A/D Mixed Mode")
   (Folder "Design Resources"
     (Folder "Library"
-      (File "C:\Cadence\PSpiceTI\tools\capture\library\pspice\analog.olb"
-        (DisplayName
-           "C:\Cadence\PSpiceTI\tools\capture\library\pspice\analog.olb")
-        (Type "Schematic Library"))
-      (File "C:\Cadence\PSpiceTI\tools\capture\library\pspice\breakout.olb"
-        (DisplayName
-           "C:\Cadence\PSpiceTI\tools\capture\library\pspice\breakout.olb")
-        (Type "Schematic Library"))
-      (File "C:\Cadence\PSpiceTI\tools\capture\library\pspice\source.olb"
-        (DisplayName
-           "C:\Cadence\PSpiceTI\tools\capture\library\pspice\source.olb")
-        (Type "Schematic Library"))
-      (File "C:\Cadence\PSpiceTI\tools\capture\library\pspice\special.olb"
-        (DisplayName
-           "C:\Cadence\PSpiceTI\tools\capture\library\pspice\special.olb")
+      (File "c:\cadence\spb_17.4\tools\capture\library\pspice\source.olb"
         (Type "Schematic Library")))
     (NoModify)
     (File "tmacontrol.dsn"
@@ -33,11 +19,92 @@
     (ANNOTATE_Property_Combine "{Value}{Source Package}")
     (DOCKED "TRUE")
     (DOCKING_POSITION "59420")
-    (PSPICE_Regenerate_Netlist_Flag "FALSE"))
+    (PSPICE_Regenerate_Netlist_Flag "FALSE")
+    (Display_Online_DRC_Results "FALSE")
+    (Netlist_TAB "3")
+    (PSPICE_Output_File "TMAControl-PSpiceFiles\SCHEMATIC1\SCHEMATIC1.NET")
+    (PSPICE_View_Output "FALSE")
+    (PSPICE_Subcircuit_Format "FALSE")
+    (PSPICE_Do_DRC_Markers "FALSE")
+    (PSPICE_Net_Name_Pref "TRUE")
+    (PSPICE_Hier_Format "FALSE")
+    (PSPICE_Hier_Descend "FALSE")
+    (PSPICE_Hier_DoNot_Descend "FALSE")
+    (PSPICE_Alt_Template "PSpiceTemplate")
+    (PSPICE_DoNot_Show_WarningDlg "TRUE")
+    (DRC_Scope "0")
+    (DRC_Action "0")
+    (DRC_Create_Warnings "TRUE")
+    (DRC_View_Output "TRUE")
+    (DRC_View_Output_Type "2")
+    (DRC_Preserved_Waived "FALSE")
+    (RUN_Online_Rules "TRUE")
+    (DRC_Run_Electrical_Rules "TRUE")
+    (DRC_Check_Single_Node_Nets "TRUE")
+    (DRC_Check_No_Driving_Source "TRUE")
+    (DRC_Check_Duplicate_NetNames "TRUE")
+    (DRC_Check_Off-Page_Connectors "FALSE")
+    (DRC_Check_Ports "FALSE")
+    (DRC_Check_Unconnected_Nets "TRUE")
+    (DRC_Check_Floating_Pins "TRUE")
+    (DRC_SDT_Compatibility "FALSE")
+    (DRC_Check_Single_Node_Nets_Online "FALSE")
+    (DRC_Check_No_Driving_Source_Online "FALSE")
+    (DRC_Check_Duplicate_NetNames_Online "FALSE")
+    (DRC_Check_Off-Page_Connectors_Online "FALSE")
+    (DRC_Check_Ports_Online "FALSE")
+    (DRC_Check_Unconnected_Nets_Online "FALSE")
+    (DRC_Check_Floating_Pins_Online "FALSE")
+    (DRC_Run_Electrical_Reports "TRUE")
+    (DRC_Report_Netnames "FALSE")
+    (DRC_Report_Off-grid_Objects "FALSE")
+    (DRC_Report_Ports_and_Off-page_Connectors "FALSE")
+    (DRC_Check_for_Misleading_TAP "FALSE")
+    (DRC_Run_Physical_Rules "TRUE")
+    (DRC_Check_Physical_Power_Pins_Visibility "TRUE")
+    (DRC_Check_PCB_Footprint_Property "TRUE")
+    (DRC_Check_Normal_Convert_View_Sync "TRUE")
+    (DRC_Check_Incorrect_PinGroup_Assignment "TRUE")
+    (DRC_Check_High_Speed_Props_Syntax "TRUE")
+    (DRC_Check_Missing_Pin_Numbers "TRUE")
+    (DRC_Check_Device_With_No_Pins "TRUE")
+    (DRC_Check_Power_Ground_Short "TRUE")
+    (DRC_Check_Name_Prop_For_HierBlocks "TRUE")
+    (DRC_Check_Physical_Power_Pins_Visibility_Online "FALSE")
+    (DRC_Check_PCB_Footprint_Property_Online "FALSE")
+    (DRC_Check_Normal_Convert_View_Sync_Online "FALSE")
+    (DRC_Check_Incorrect_PinGroup_Assignment_Online "FALSE")
+    (DRC_Check_Missing_Pin_Numbers_Online "FALSE")
+    (DRC_Check_Device_With_No_Pins_Online "FALSE")
+    (DRC_Check_Power_Ground_Short_Online "FALSE")
+    (DRC_Check_Name_Prop_For_HierBlocks_Online "FALSE")
+    (DRC_Run_Physical_Reports "TRUE")
+    (DRC_Visible_Power_pins "FALSE")
+    (DRC_Report_Unused_Part_Packages "TRUE")
+    (DRC_Type_Mismatch "TRUE")
+    (DRC_Identical_References "TRUE")
+    (DRC_Run_Simulation_Rules "TRUE")
+    (DRC_Check_Pspice_Model_Lib_Path_Online "TRUE")
+    (DRC_Run_Custom_Rules "FALSE")
+    (DRC_Report_File
+       "C:\USERS\GRONA\DOCUMENTS\TMACONTROL-CCLIENT\HARDWARE\TMACONTROL.DRC")
+    ("Allegro Netlist Directory" "allegro")
+    ("Allegro Netlist Output Board File" ".\allegro\tmacontrol.brd"))
   (Folder "Layout")
   (Folder "Outputs"
     (File ".\tmacontrol-pspicefiles\schematic1\schematic1.net"
-      (Type "Report")))
+      (Type "Report"))
+    (File ".\tmacontrol.drc"
+      (Type "Report"))
+    (File ".\allegro\pstxnet.dat"
+      (Type "Report")
+      (DisplayName "pstxnet.dat"))
+    (File ".\allegro\pstxprt.dat"
+      (Type "Report")
+      (DisplayName "pstxprt.dat"))
+    (File ".\allegro\pstchip.dat"
+      (Type "Report")
+      (DisplayName "pstchip.dat")))
   (Folder "PSpice Resources"
     (Folder "Model Libraries"
       (Sort User))
@@ -57,6 +124,18 @@
         (Type "PSpice Profile"))))
   (DefaultLibraryBrowseDirectory "library\PSpice")
   (PartMRUSelector
+    (RASPBERRY_PI_3_MODEL_B+
+      (FullPartName "RASPBERRY_PI_3_MODEL_B+.Normal")
+      (LibraryName
+         "C:\USERS\GRONA\DOCUMENTS\TMACONTROL-CCLIENT\HARDWARE\LIBRARY\RASPBERRY_PI_3_MODEL_B+.OLB")
+      (DeviceIndex "0"))
+    (0
+      (LibraryName
+         "C:\CADENCE\SPB_17.4\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (OFFPAGELEFT-L
+      (LibraryName "C:\CADENCE\SPB_17.4\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
     (VPULSE
       (FullPartName "VPULSE.Normal")
       (LibraryName
@@ -76,9 +155,6 @@
       (FullPartName "DigClock.Normal")
       (LibraryName
          "C:\CADENCE\SPB_17.4\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
-      (DeviceIndex "0"))
-    (0
-      (LibraryName "C:\CADENCE\SPB_17.4\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
       (DeviceIndex "0"))
     (PORTRIGHT-L
       (LibraryName "C:\CADENCE\SPB_17.4\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
@@ -112,36 +188,72 @@
       (LibraryName "..\..\LIBRARY\PSPICE\SOURCE.OLB")
       (DeviceIndex "0")))
   (LastUsedLibraryBrowseDirectory
-     "C:\Cadence\SPB_17.4\tools\capture\library\pspice")
-  (MPSSessionName "rlemeill")
-  (Folder "Logs")
+     "C:\Users\grona\Documents\TMAControl-CClient\hardware\Library")
+  (MPSSessionName "grona")
+  (Folder "Logs"
+    (File ".\allegro\netlist.log"
+      (Type "Log File")
+      (LogFile
+         "C:\Users\grona\Documents\TMAControl-CClient\hardware\allegro\netlist.log"))
+    (File ".\allegro\netrev.lst"
+      (Type "Log File")
+      (LogFile
+         "C:\Users\grona\Documents\TMAControl-CClient\hardware\allegro\netrev.lst"))
+    (File ".\allegro\eco.txt"
+      (Type "Log File")
+      (LogFile
+         "C:\Users\grona\Documents\TMAControl-CClient\hardware\allegro\eco.txt")))
   (GlobalState
     (FileView
       (Path "Design Resources")
       (Path "Design Resources"
-         "c:\users\rlemeill\documents\tmacontrol-cclient\hardware\tmacontrol.dsn")
+         "C:\Users\grona\Documents\TMAControl-CClient\hardware\tmacontrol.dsn")
       (Path "Design Resources"
-         "c:\users\rlemeill\documents\tmacontrol-cclient\hardware\tmacontrol.dsn"
+         "C:\Users\grona\Documents\TMAControl-CClient\hardware\tmacontrol.dsn"
          "SCHEMATIC1")
       (Path "Design Resources" "Library")
+      (Path "Layout")
       (Path "Outputs")
+      (Path "Logs")
       (Select "Design Resources"
-         "c:\users\rlemeill\documents\tmacontrol-cclient\hardware\tmacontrol.dsn"
-         "SCHEMATIC1" "PAGE1"))
+         "C:\Users\grona\Documents\TMAControl-CClient\hardware\tmacontrol.dsn"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -1 -1 0 250 0 866"))
+        (Placement "44 0 1 -1 -1 -1 -1 0 200 0 600"))
       (Tab 0))
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 2 3 -1 -1 -8 -31 52 1966 52 737")
-        (Scroll "-200 -7")
-        (Zoom "108")
+        (Placement "44 0 1 -1 -1 5 24 5 1093 24 618")
+        (Scroll "-33 0")
+        (Zoom "102")
         (Occurrence "/"))
       (Path
-         "C:\USERS\RLEMEILL\DOCUMENTS\TMACONTROL-CCLIENT\HARDWARE\TMACONTROL.DSN")
+         "C:\USERS\GRONA\DOCUMENTS\TMACONTROL-CCLIENT\HARDWARE\TMACONTROL.DSN")
       (Schematic "SCHEMATIC1")
-      (Page "PAGE1"))))
+      (Page "LOGIC"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 5 24 5 1093 24 618")
+        (Scroll "-33 0")
+        (Zoom "102")
+        (Occurrence "/"))
+      (Path
+         "C:\USERS\GRONA\DOCUMENTS\TMACONTROL-CCLIENT\HARDWARE\TMACONTROL.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "PSPICE"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 5 24 5 1093 24 618")
+        (Scroll "-14 0")
+        (Zoom "106")
+        (Occurrence "/"))
+      (Path
+         "C:\USERS\GRONA\DOCUMENTS\TMACONTROL-CCLIENT\HARDWARE\TMACONTROL.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "RPI3b+")))
+  (ISPCBBASICLICENSE "false"))

@@ -3,7 +3,7 @@
 @Settings: 0 1
 @General:
 ProfileName= "Simulate" 
-ProfileFile= "Simulate.sim" 
+ProfileFile= "simulate.sim" 
 Connectivity= "SCHEMATIC1.net" 
 NetlistFile= "Simulate.cir" 
 DataFile= "Simulate.dat" 
