@@ -1,0 +1,8 @@
+2021-04-04T11:24:23 ===> "c:/users/grona/documents/tmacontrol-cclient/hardware/allegro/pstchip.dat"
+2021-04-04T11:24:23 ===> "c:/users/grona/documents/tmacontrol-cclient/hardware/allegro/pstxnet.dat"
+2021-04-04T11:24:23 ===> "c:/users/grona/documents/tmacontrol-cclient/hardware/allegro/pstxprt.dat"
+2021-04-04T11:24:23 ===> "c:/users/grona/documents/tmacontrol-cclient/hardware/allegro/pstdmlmodels.dat"
+2021-04-04T11:27:00 ===> "c:/users/grona/documents/tmacontrol-cclient/hardware/allegro/pstchip.dat"
+2021-04-04T11:27:00 ===> "c:/users/grona/documents/tmacontrol-cclient/hardware/allegro/pstxnet.dat"
+2021-04-04T11:27:00 ===> "c:/users/grona/documents/tmacontrol-cclient/hardware/allegro/pstxprt.dat"
+2021-04-04T11:27:00 ===> "c:/users/grona/documents/tmacontrol-cclient/hardware/allegro/pstdmlmodels.dat"

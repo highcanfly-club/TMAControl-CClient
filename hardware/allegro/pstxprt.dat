@@ -1,0 +1,70 @@
+FILE_TYPE = EXPANDEDPARTLIST;
+{ Using PSTWRITER 17.4.0 d001Apr-04-2021 at 11:26:59 }
+DIRECTIVES
+ PST_VERSION='PST_HDL_CENTRIC_VERSION_0';
+ ROOT_DRAWING='TMACONTROL';
+ POST_TIME='Feb 23 2021 16:03:52';
+ SOURCE_TOOL='CAPTURE_WRITER';
+END_DIRECTIVES;
+
+PART_NAME
+ J1 'HEADER 2_SHDRRA2W100P0X508_1X2_1140X1210X830P_HEADER 2':;
+
+SECTION_NUMBER 1
+ '@TMACONTROL.TMACONTROL RPI3B+ HAT(SCH_1):INS22805@CONNECTOR.HEADER 2.NORMAL(CHIPS)':
+ C_PATH='@tmacontrol.\tmacontrol rpi3b+ hat\(sch_1):ins22805@connector.\header 2.normal\(chips)',
+ P_PATH='@tmacontrol.\tmacontrol rpi3b+ hat\(sch_1):page1_ins22805@connector.\header 2.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R1 'R_AXRC05_10K':;
+
+SECTION_NUMBER 1
+ '@TMACONTROL.TMACONTROL RPI3B+ HAT(SCH_1):INS16618@ANALOG.R.NORMAL(CHIPS)':
+ C_PATH='@tmacontrol.\tmacontrol rpi3b+ hat\(sch_1):ins16618@analog.\r.normal\(chips)',
+ P_PATH='@tmacontrol.\tmacontrol rpi3b+ hat\(sch_1):page1_ins16618@analog.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R2 'R_AXRC05_4.7K':;
+
+SECTION_NUMBER 1
+ '@TMACONTROL.TMACONTROL RPI3B+ HAT(SCH_1):INS15850@ANALOG.R.NORMAL(CHIPS)':
+ C_PATH='@tmacontrol.\tmacontrol rpi3b+ hat\(sch_1):ins15850@analog.\r.normal\(chips)',
+ P_PATH='@tmacontrol.\tmacontrol rpi3b+ hat\(sch_1):page1_ins15850@analog.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U1 'PC816_DIP4_3_PC817':;
+
+SECTION_NUMBER 1
+ '@TMACONTROL.TMACONTROL RPI3B+ HAT(SCH_1):INS14303@OPT.PC816.NORMAL(CHIPS)':
+ C_PATH='@tmacontrol.\tmacontrol rpi3b+ hat\(sch_1):ins14303@opt.\pc816.normal\(chips)',
+ P_PATH='@tmacontrol.\tmacontrol rpi3b+ hat\(sch_1):page1_ins14303@opt.\pc816.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U2 'RASPBERRY_PI_3_MODEL_B+_0_HDRV40W64P254X254_2X20_5080X508X869P_RASPBERRY_PI_3_MODEL_B+':;
+
+SECTION_NUMBER 1
+ '@TMACONTROL.TMACONTROL RPI3B+ HAT(SCH_1):INS21813@TMACONTROL.RASPBERRY_PI_3_MODEL_B+_0.NORMAL(CHIPS)':
+ C_PATH='@tmacontrol.\tmacontrol rpi3b+ hat\(sch_1):ins21813@tmacontrol.\raspberry_pi_3_model_b+_0.normal\(chips)',
+ P_PATH='@tmacontrol.\tmacontrol rpi3b+ hat\(sch_1):page1_ins21813@tmacontrol.\raspberry_pi_3_model_b+_0.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U3 '12V5V_PSU_PSU_12V_5V_USB_12V5V_PSU':;
+
+SECTION_NUMBER 1
+ '@TMACONTROL.TMACONTROL RPI3B+ HAT(SCH_1):INS22690@POWERSUPPLY.12V5V_PSU.NORMAL(CHIPS)':
+ C_PATH='@tmacontrol.\tmacontrol rpi3b+ hat\(sch_1):ins22690@powersupply.\12v5v_psu.normal\(chips)',
+ P_PATH='@tmacontrol.\tmacontrol rpi3b+ hat\(sch_1):page1_ins22690@powersupply.\12v5v_psu.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+END.

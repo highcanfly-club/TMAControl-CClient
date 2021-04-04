@@ -1,0 +1,98 @@
+(---------------------------------------------------------------------)
+(                                                                     )
+(    Allegro Netrev Import Logic                                      )
+(                                                                     )
+(    Drawing          : tmacontrol.brd                                )
+(    Software Version : 17.4S015                                      )
+(    Date/Time        : Sun Apr  4 11:27:00 2021                      )
+(                                                                     )
+(---------------------------------------------------------------------)
+
+
+------ Directives ------------
+
+Ripup etch:                  No
+Ripup delete first segment:  No
+Ripup retain bondwire:       No
+Ripup symbols:               Always
+Missing symbol has error:    No
+DRC update:                  Yes
+Schematic directory:         'c:\users\grona\documents\tmacontrol-cclient\hardware\allegro'
+Design Directory:            'C:/Users/grona/Documents/TMAControl-CClient/hardware/allegro'
+Old design name:             'C:/Users/grona/Documents/TMAControl-CClient/hardware/allegro/tmacontrol.brd'
+New design name:             'C:/Users/grona/Documents/TMAControl-CClient/hardware/allegro/tmacontrol.brd'
+
+CmdLine: netrev.exe -y 1 -n -i c:\users\grona\documents\tmacontrol-cclient\hardware\allegro C:/Users/grona/Documents/TMAControl-CClient/hardware/allegro/tmacontrol.brd C:/Users/grona/Documents/TMAControl-CClient/hardware/allegro/tmacontrol.brd
+
+------ Preparing to read pst files ------
+
+Starting to read c:/users/grona/documents/tmacontrol-cclient/hardware/allegro/pstchip.dat 
+   Finished reading c:/users/grona/documents/tmacontrol-cclient/hardware/allegro/pstchip.dat (00:00:00.02)
+Starting to read c:/users/grona/documents/tmacontrol-cclient/hardware/allegro/pstxprt.dat 
+   Finished reading c:/users/grona/documents/tmacontrol-cclient/hardware/allegro/pstxprt.dat (00:00:00.00)
+Starting to read c:/users/grona/documents/tmacontrol-cclient/hardware/allegro/pstxnet.dat 
+   Finished reading c:/users/grona/documents/tmacontrol-cclient/hardware/allegro/pstxnet.dat (00:00:00.00)
+
+------ Oversights/Warnings/Errors ------
+
+
+#1   WARNING(SPMHNI-184): Device library warning detected.
+
+WARNING(SPMHNI-198): Problems with device 'RASPBERRY_PI_3_MODEL_B+_0_HDRV40W64P254X254_2X20_5080X508X869P_RASPBERRY_PI_3_MODEL_B+'. Pinname 'GPIO7/!SPI_CE1!' is replaced by '$0': 'Pin name is not legal.'. [help]
+
+#2   WARNING(SPMHNI-184): Device library warning detected.
+
+WARNING(SPMHNI-198): Problems with device 'RASPBERRY_PI_3_MODEL_B+_0_HDRV40W64P254X254_2X20_5080X508X869P_RASPBERRY_PI_3_MODEL_B+'. Pinname 'GPIO8/!SPI_CE0!' is replaced by '$1': 'Pin name is not legal.'. [help]
+
+------ Library Paths ------
+MODULEPATH =  . 
+           C:/Cadence/SPB_17.4/share/local/pcb/modules 
+
+PSMPATH =  . 
+           symbols 
+           .. 
+           ../symbols 
+           C:/Cadence/SPB_17.4/share/local/pcb/symbols 
+           C:/Cadence/SPB_17.4/share/pcb/pcb_lib/symbols 
+           C:/Cadence/SPB_17.4/share/pcb/allegrolib/symbols 
+
+PADPATH =  . 
+           symbols 
+           .. 
+           ../symbols 
+           C:/Cadence/SPB_17.4/share/local/pcb/padstacks 
+           C:/Cadence/SPB_17.4/share/pcb/pcb_lib/symbols 
+           C:/Cadence/SPB_17.4/share/pcb/allegrolib/symbols 
+
+
+------ Summary Statistics ------
+
+
+netrev run on Apr 4 11:27:00 2021
+   DESIGN NAME : 'TMACONTROL'
+   PACKAGING ON Feb 23 2021 16:03:52
+
+   COMPILE 'logic'
+   CHECK_PIN_NAMES OFF
+   CROSS_REFERENCE OFF
+   FEEDBACK OFF
+   INCREMENTAL OFF
+   INTERFACE_TYPE PHYSICAL
+   MAX_ERRORS 500
+   MERGE_MINIMUM 5
+   NET_NAME_CHARS '#%&()*+-./:=>?@[]^_`|'
+   NET_NAME_LENGTH 24
+   OVERSIGHTS ON
+   REPLACE_CHECK OFF
+   SINGLE_NODE_NETS ON
+   SPLIT_MINIMUM 0
+   SUPPRESS   20
+   WARNINGS ON
+
+ No error detected
+ No oversight detected
+  2 warnings detected
+
+cpu time      0:00:30
+elapsed time  0:00:00
+

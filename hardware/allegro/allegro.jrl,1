@@ -1,0 +1,1106 @@
+\t (00:00:03) allegro 17.4 S015 Windows SPB 64-bit Edition
+\t (00:00:03)     Journal start - Sun Apr  4 12:02:24 2021
+\t (00:00:03)         Host=GIGATABX User=grona Pid=5688 CPUs=8
+\t (00:00:03) CmdLine= C:\Cadence\SPB_17.4\tools\bin\allegro.exe -mpssession grona -proj c:\users\grona\documents\tmacontrol-cclient\hardware\tmacontrol.opj c:\users\grona\documents\tmacontrol-cclient\hardware\allegro\tmacontrol.brd
+\t (00:00:03) 
+   (00:00:03) Loading axlcore.cxt 
+\t (00:00:05) Opening existing design...
+\i (00:00:05) QtSignal SPBFoldDockArea FoldAreaTabWidget currentChanged tmacontrol
+\d (00:00:05) Design opened: c:/users/grona/documents/tmacontrol-cclient/hardware/allegro/tmacontrol.brd
+\i (00:00:06) trapsize 9252
+\i (00:00:06) trapsize 9556
+\i (00:00:06) trapsize 9252
+\i (00:00:06) trapsize 11503
+\i (00:00:06) trapsize 11503
+\t (00:00:06) > Sending response DoneOpenBoard
+\i (00:00:06) trapsize 7068
+\i (00:00:07) generaledit 
+\i (00:00:25) done 
+\i (00:00:25) place manual 
+\i (00:00:25) setwindow form.plc_manual
+\i (00:00:25) FORM plc_manual tree  'Components by refdes' 
+\i (00:00:25) setwindow pcb
+\i (00:00:25) FORM plc_manual placement_list 
+\i (00:00:25) FORM plc_manual categories Components by refdes 
+\i (00:00:25) trapsize 7068
+\i (00:00:27) setwindow form.plc_manual
+\i (00:00:27) FORM plc_manual tree  U3 'Components by refdes' 
+\i (00:00:30) FORM plc_manual tree 'MULTISEL YES' U3 'Components by refdes' 
+\t (00:00:31) Placing U3 / 12V5V_PSU_PSU_12V_5V_USB_12V5V_PSU / PSU_12V_5V_USB on Top.
+\i (00:00:50) FORM plc_manual advanced_settings  
+\i (00:00:51) FORM plc_manual placement_list  
+\i (00:00:54) FORM plc_manual cancel  
+\i (00:00:54) setwindow pcb
+\i (00:00:54) generaledit 
+\i (00:01:07) prmed 
+\i (00:01:51) setwindow form.prmedit
+\i (00:01:51) FORM prmedit design  
+\i (00:01:55) FORM prmedit size A1 
+\i (00:01:57) FORM prmedit apply  
+\i (00:01:57) setwindow pcb
+\i (00:01:57) trapsize 7068
+\i (00:01:58) setwindow form.prmedit
+\i (00:01:58) FORM prmedit done  
+\i (00:01:58) setwindow pcb
+\i (00:01:58) generaledit 
+\i (00:02:05) done 
+\i (00:02:05) place manual 
+\i (00:02:05) setwindow form.plc_manual
+\i (00:02:05) FORM plc_manual tree  'Components by refdes' 
+\i (00:02:06) setwindow pcb
+\i (00:02:06) FORM plc_manual placement_list 
+\i (00:02:06) FORM plc_manual categories Components by refdes 
+\i (00:02:06) trapsize 7068
+\i (00:02:07) setwindow form.plc_manual
+\i (00:02:07) FORM plc_manual tree  U3 'Components by refdes' 
+\i (00:02:08) FORM plc_manual tree 'MULTISEL YES' U3 'Components by refdes' 
+\t (00:02:08) Placing U3 / 12V5V_PSU_PSU_12V_5V_USB_12V5V_PSU / PSU_12V_5V_USB on Top.
+\i (00:02:17) FORM plc_manual cancel  
+\i (00:02:17) setwindow pcb
+\i (00:02:17) generaledit 
+\i (00:04:08) done 
+\i (00:04:08) place manual 
+\i (00:04:08) setwindow form.plc_manual
+\i (00:04:08) FORM plc_manual tree  'Components by refdes' 
+\i (00:04:08) setwindow pcb
+\i (00:04:08) FORM plc_manual placement_list 
+\i (00:04:08) FORM plc_manual categories Components by refdes 
+\i (00:04:08) trapsize 7068
+\i (00:04:12) setwindow form.plc_manual
+\i (00:04:12) FORM plc_manual tree  U3 'Components by refdes' 
+\i (00:04:12) FORM plc_manual tree 'MULTISEL YES' U3 'Components by refdes' 
+\t (00:04:12) Placing U3 / 12V5V_PSU_PSU_12V_5V_USB_12V5V_PSU / PSU_12V_5V_USB on Top.
+\i (00:04:14) setwindow pcb
+\i (00:04:14) pick grid 121.9948 110.4031
+\t (00:04:14) last pick:  121.9200 109.2200
+\i (00:04:22) setwindow form.plc_manual
+\i (00:04:22) FORM plc_manual tree 'MULTISEL YES' U3 'Components by refdes' 
+\t (00:04:22) last pick:  121.9200 109.2200
+\t (00:04:22) Placing U3 / 12V5V_PSU_PSU_12V_5V_USB_12V5V_PSU / PSU_12V_5V_USB on Top.
+\i (00:04:24) setwindow pcb
+\i (00:04:24) pick grid 191.8272 141.0785
+\t (00:04:24) last pick:  193.0400 142.2400
+\i (00:04:26) pick grid 192.5340 141.0785
+\t (00:04:26) last pick:  193.0400 142.2400
+\i (00:04:28) pick grid 265.4764 251.7644
+\t (00:04:28) last pick:  266.7000 251.4600
+\i (00:04:28) pick grid dbl 265.4764 251.7644
+\t (00:04:28) last pick:  266.7000 251.4600
+\i (00:04:29) pick grid 265.4764 251.7644
+\t (00:04:29) last pick:  266.7000 251.4600
+\i (00:04:29) pick grid dbl 265.4764 251.7644
+\t (00:04:29) last pick:  266.7000 251.4600
+\i (00:04:31) pick grid 119.8743 117.4712
+\t (00:04:31) last pick:  119.3800 116.8400
+\i (00:04:39) setwindow form.plc_manual
+\i (00:04:39) FORM plc_manual tree 'MULTISEL YES' U3 'Components by refdes' 
+\t (00:04:39) last pick:  193.0400 142.2400
+\t (00:04:39) Placing U3 / 12V5V_PSU_PSU_12V_5V_USB_12V5V_PSU / PSU_12V_5V_USB on Top.
+\i (00:04:43) setwindow pcb
+\i (00:04:43) prepopup 208.3665 126.3770
+\i (00:04:54) pick grid 64.8848 96.2670
+\t (00:04:54) last pick:  66.0400 96.5200
+\i (00:04:55) pick grid 65.1675 96.6911
+\t (00:04:55) last pick:  66.0400 96.5200
+\i (00:04:56) pick grid 65.1675 96.6911
+\t (00:04:56) last pick:  66.0400 96.5200
+\i (00:04:56) pick grid 65.1675 96.6911
+\t (00:04:56) last pick:  66.0400 96.5200
+\i (00:04:56) pick grid dbl 65.1675 96.6911
+\t (00:04:56) last pick:  66.0400 96.5200
+\i (00:04:56) pick grid 65.1675 96.6911
+\t (00:04:56) last pick:  66.0400 96.5200
+\i (00:05:11) pick 0 0 
+\t (00:05:11) last pick:  0.0000 0.0000
+\i (00:05:17) pick grid 94.5707 178.6806
+\t (00:05:17) last pick:  93.9800 177.8000
+\i (00:05:18) pick grid 94.5707 178.6806
+\t (00:05:18) last pick:  93.9800 177.8000
+\i (00:05:19) pick grid 94.5707 178.6806
+\t (00:05:19) last pick:  93.9800 177.8000
+\i (00:05:19) pick grid dbl 94.5707 178.6806
+\t (00:05:19) last pick:  93.9800 177.8000
+\i (00:05:20) pick grid 94.5707 178.6806
+\t (00:05:20) last pick:  93.9800 177.8000
+\i (00:05:21) zoom in 1 
+\i (00:05:21) setwindow pcb
+\i (00:05:21) zoom in 150.9738 207.3770
+\i (00:05:21) trapsize 3534
+\i (00:05:21) zoom in 1 
+\i (00:05:21) setwindow pcb
+\i (00:05:21) zoom in 150.9738 207.3770
+\i (00:05:21) trapsize 1767
+\i (00:05:21) zoom in 1 
+\i (00:05:21) setwindow pcb
+\i (00:05:21) zoom in 150.9739 207.3770
+\i (00:05:21) trapsize 884
+\i (00:05:21) zoom in 1 
+\i (00:05:21) setwindow pcb
+\i (00:05:21) zoom in 150.9739 207.3770
+\i (00:05:21) trapsize 442
+\i (00:05:21) zoom in 1 
+\i (00:05:21) setwindow pcb
+\i (00:05:21) zoom in 150.9740 207.3771
+\i (00:05:21) trapsize 221
+\i (00:05:21) zoom in 1 
+\i (00:05:21) setwindow pcb
+\i (00:05:21) zoom in 150.9740 207.3771
+\i (00:05:21) trapsize 110
+\i (00:05:21) zoom in 1 
+\i (00:05:21) setwindow pcb
+\i (00:05:21) zoom in 150.9741 207.3771
+\i (00:05:21) trapsize 55
+\i (00:05:21) zoom in 1 
+\i (00:05:21) setwindow pcb
+\i (00:05:21) zoom in 150.9741 207.3771
+\i (00:05:21) trapsize 28
+\i (00:05:21) zoom out 1 
+\i (00:05:21) setwindow pcb
+\i (00:05:21) zoom out 150.9741 207.3771
+\i (00:05:21) trapsize 55
+\i (00:05:21) zoom out 1 
+\i (00:05:21) setwindow pcb
+\i (00:05:21) zoom out 150.9742 207.3772
+\i (00:05:21) trapsize 110
+\i (00:05:21) zoom out 1 
+\i (00:05:21) setwindow pcb
+\i (00:05:21) zoom out 150.9742 207.3772
+\i (00:05:21) trapsize 221
+\i (00:05:21) zoom out 1 
+\i (00:05:21) setwindow pcb
+\i (00:05:21) zoom out 150.9741 207.3773
+\i (00:05:21) trapsize 442
+\i (00:05:21) zoom out 1 
+\i (00:05:21) setwindow pcb
+\i (00:05:21) zoom out 150.9741 207.3773
+\i (00:05:21) trapsize 884
+\i (00:05:21) zoom out 1 
+\i (00:05:21) setwindow pcb
+\i (00:05:21) zoom out 150.9741 207.3773
+\i (00:05:21) trapsize 1767
+\i (00:05:21) zoom out 1 
+\i (00:05:21) setwindow pcb
+\i (00:05:21) zoom out 150.9742 207.3773
+\i (00:05:21) trapsize 3534
+\i (00:05:21) zoom out 1 
+\i (00:05:21) setwindow pcb
+\i (00:05:21) zoom out 150.9741 207.3772
+\i (00:05:21) trapsize 7068
+\i (00:05:21) zoom out 1 
+\i (00:05:21) setwindow pcb
+\i (00:05:21) zoom out 150.9741 207.3772
+\i (00:05:21) trapsize 14136
+\i (00:05:21) zoom out 1 
+\i (00:05:21) setwindow pcb
+\i (00:05:21) zoom out 301.9461 414.7518
+\i (00:05:21) trapsize 19990
+\i (00:05:21) zoom out 1 
+\i (00:05:21) setwindow pcb
+\i (00:05:21) zoom out 426.9967 431.2775
+\i (00:05:21) trapsize 19990
+\i (00:05:24) setwindow form.plc_manual
+\i (00:05:24) FORM plc_manual cancel  
+\i (00:05:24) setwindow pcb
+\i (00:05:24) generaledit 
+\i (00:05:29) move 
+\t (00:05:30) Select element(s) to move.
+\i (00:05:31) drag_start grid 365.8258 418.0838
+\i (00:05:32) drag_stop 371.8229 424.0809
+\t (00:05:32) last pick:  193.0400 142.2400
+\t (00:05:32) Moving U3 / 12V5V_PSU_PSU_12V_5V_USB_12V5V_PSU / PSU_12V_5V_USB.
+\t (00:05:32) Pick new location for the element(s).
+\t (00:05:38) last pick:  21.5897 -136.0523
+\w (00:05:38) WARNING(SPMHUT-40): Pick is outside the extent of the drawing ... pick again.
+\t (00:05:39) last pick:  56.3732 -85.2765
+\w (00:05:39) WARNING(SPMHUT-40): Pick is outside the extent of the drawing ... pick again.
+\t (00:05:39) last pick:  56.3732 -85.2765
+\w (00:05:39) WARNING(SPMHUT-40): Pick is outside the extent of the drawing ... pick again.
+\i (00:05:51) pick grid 254.6787 368.5074
+\t (00:05:51) last pick:  254.0000 368.3000
+\e (00:05:51) ERROR(SPMHA1-150): Symbol does not fit into the drawing ... reposition the symbol.
+\i (00:05:51) pick grid dbl 254.6787 368.5074
+\t (00:05:51) last pick:  254.0000 368.3000
+\e (00:05:51) ERROR(SPMHA1-150): Symbol does not fit into the drawing ... reposition the symbol.
+\t (00:05:54) last pick:  104.3503 -79.6792
+\w (00:05:54) WARNING(SPMHUT-40): Pick is outside the extent of the drawing ... pick again.
+\i (00:05:58) undo 
+\i (00:05:58) trapsize 19990
+\i (00:05:58) generaledit 
+\i (00:05:58) undo 
+\i (00:05:58) trapsize 7068
+\i (00:05:58) generaledit 
+\i (00:05:59) undo 
+\i (00:05:59) trapsize 7068
+\i (00:05:59) generaledit 
+\i (00:06:00) undo 
+\i (00:06:00) trapsize 7068
+\i (00:06:00) generaledit 
+\i (00:09:08) done 
+\i (00:09:08) place manual 
+\i (00:09:08) setwindow form.plc_manual
+\i (00:09:08) FORM plc_manual tree  'Components by refdes' 
+\i (00:09:08) setwindow pcb
+\i (00:09:08) FORM plc_manual placement_list 
+\i (00:09:08) FORM plc_manual categories Components by refdes 
+\i (00:09:08) trapsize 7068
+\i (00:09:09) setwindow form.plc_manual
+\i (00:09:09) FORM plc_manual tree  U3 'Components by refdes' 
+\i (00:09:10) FORM plc_manual tree 'MULTISEL YES' U3 'Components by refdes' 
+\t (00:09:10) Placing U3 / 12V5V_PSU_PSU_12V_5V_USB_12V5V_PSU / PSU_12V_5V_USB on Top.
+\i (00:09:16) setwindow pcb
+\i (00:09:16) pick grid 125.2461 110.4031
+\t (00:09:16) last pick:  124.4600 109.2200
+\i (00:09:20) setwindow form.plc_manual
+\i (00:09:20) FORM plc_manual done  
+\i (00:09:21) setwindow pcb
+\i (00:09:21) generaledit 
+\i (00:09:22) save 
+\i (00:09:24) fillin yes 
+\t (00:09:24) > Sending response DoneOpenBoard
+\i (00:09:25) generaledit 
+\i (00:10:52) prmed 
+\i (00:11:01) setwindow form.prmedit
+\i (00:11:01) FORM prmedit cancel  
+\i (00:11:02) setwindow pcb
+\i (00:11:02) generaledit 
+\i (00:11:13) cmgr 
+\i (00:11:14) generaledit 
+\i (00:11:24) QtSignal m_dockWsQtWidgetContents m_domainSelector currentChanged Physical
+\i (00:11:33) QtSignal m_domainSelector WS_Physical itemSelectionChanged "Physical Constraint Set" +
+\i (00:11:33) QtSignal "All Layers"
+\i (00:11:33) QtSignal m_domainSelector WS_Physical itemClicked "Physical Constraint Set" "All Layers"
+\i (00:11:48) QtSignal CCMVTabbediewHost57 CCMViewHost58 keyPressEvent 16777248 33554432 false 1
+\i (00:11:49) QtSignal All_Layers_WorksheetView58 delegate TAB "0.5"
+\i (00:12:13) QtSignal m_domainSelector WS_Physical itemSelectionChanged Net "All Layers"
+\i (00:12:13) QtSignal m_domainSelector WS_Physical itemClicked Net "All Layers"
+\i (00:12:36) add connect 
+\w (00:12:36) WARNING(SPMHUT-48): Scaled value has been rounded off.
+\t (00:12:37) Pick first element.
+\i (00:13:09) auto_route 
+\w (00:13:09) Xtalk table in drawing c:/users/grona/documents/tmacontrol-cclient/hardware/allegro/tmacontrol.brd does not exist. For xtalk estimation or xtalk DRC update, xtalk tables must be generated.
+   (00:13:09) Loading consmgr.cxt 
+   (00:13:09) Loading acns_formula.cxt 
+   (00:13:09) Loading vse.cxt 
+\i (00:13:17) setwindow form.vse_armain
+\i (00:13:17) FORM vse_armain execute  
+\i (00:13:23) FORM vse_armain execute  
+\i (00:13:30) FORM vse_armain close  
+\i (00:13:30) setwindow pcb
+\i (00:13:30) generaledit 
+\i (00:16:27) cmgr 
+\i (00:16:27) QtSignal m_domainSelector WS_Physical itemSelectionChanged
+\i (00:16:27) QtSignal m_dockWsQtWidgetContents m_domainSelector currentChanged Electrical
+\i (00:16:27) QtSignal m_dockWsQtWidgetContents m_domainSelector currentChanged
+\i (00:16:27) QtSignal m_dockWsQtWidgetContents m_domainSelector currentChanged Electrical
+\i (00:16:27) QtSignal m_dockWsQtWidgetContents m_domainSelector currentChanged Physical
+\i (00:16:27) QtSignal m_domainSelector WS_Physical itemSelectionChanged Net "All Layers"
+\i (00:16:27) QtSignal Frozen_All_Layers_WorksheetView58 Frozen_All_Layers_WorksheetView58Header sectionMoved +
+\i (00:16:27) QtSignal 0 0 1
+\i (00:16:27) QtSignal Frozen_All_Layers_WorksheetView58 Frozen_All_Layers_WorksheetView58Header sectionMoved +
+\i (00:16:27) QtSignal 1 1 0
+\i (00:16:27) QtSignal All_Layers_WorksheetView58 All_Layers_WorksheetView58Header sectionMoved +
+\i (00:16:27) QtSignal 0 0 1
+\i (00:16:27) QtSignal All_Layers_WorksheetView58 All_Layers_WorksheetView58Header sectionMoved +
+\i (00:16:27) QtSignal 1 1 0
+\i (00:16:27) QtSignal Frozen_All_Layers_WorksheetView58 Frozen_All_Layers_WorksheetView58Header sectionMoved +
+\i (00:16:27) QtSignal 0 1 3
+\i (00:16:27) QtSignal Frozen_All_Layers_WorksheetView58 Frozen_All_Layers_WorksheetView58Header sectionMoved +
+\i (00:16:27) QtSignal 3 3 1
+\i (00:16:27) QtSignal All_Layers_WorksheetView58 All_Layers_WorksheetView58Header sectionMoved +
+\i (00:16:27) QtSignal 0 1 3
+\i (00:16:27) QtSignal All_Layers_WorksheetView58 All_Layers_WorksheetView58Header sectionMoved +
+\i (00:16:27) QtSignal 3 3 1
+\i (00:16:27) QtSignal CCMViewHost58 tableWidget currentChanged tmacontrol
+\i (00:16:27) QtSignal m_domainSelector WS_Physical itemSelectionChanged
+\i (00:16:27) QtSignal m_domainSelector WS_Physical itemSelectionChanged "Physical Constraint Set" +
+\i (00:16:27) QtSignal "All Layers"
+\i (00:16:27) QtSignal Frozen_All_Layers_WorksheetView63 Frozen_All_Layers_WorksheetView63Header sectionMoved +
+\i (00:16:27) QtSignal 0 0 1
+\i (00:16:27) QtSignal Frozen_All_Layers_WorksheetView63 Frozen_All_Layers_WorksheetView63Header sectionMoved +
+\i (00:16:27) QtSignal 1 1 0
+\i (00:16:27) QtSignal All_Layers_WorksheetView63 All_Layers_WorksheetView63Header sectionMoved +
+\i (00:16:27) QtSignal 0 0 1
+\i (00:16:27) QtSignal All_Layers_WorksheetView63 All_Layers_WorksheetView63Header sectionMoved +
+\i (00:16:27) QtSignal 1 1 0
+\i (00:16:27) QtSignal Frozen_All_Layers_WorksheetView63 Frozen_All_Layers_WorksheetView63Header sectionMoved +
+\i (00:16:27) QtSignal 0 1 3
+\i (00:16:27) QtSignal Frozen_All_Layers_WorksheetView63 Frozen_All_Layers_WorksheetView63Header sectionMoved +
+\i (00:16:27) QtSignal 3 3 1
+\i (00:16:27) QtSignal All_Layers_WorksheetView63 All_Layers_WorksheetView63Header sectionMoved +
+\i (00:16:27) QtSignal 0 1 3
+\i (00:16:27) QtSignal All_Layers_WorksheetView63 All_Layers_WorksheetView63Header sectionMoved +
+\i (00:16:27) QtSignal 3 3 1
+\i (00:16:27) QtSignal CCMViewHost63 tableWidget currentChanged tmacontrol
+\i (00:16:27) QtSignal m_domainSelector WS_Physical itemSelectionChanged
+\i (00:16:27) QtSignal m_domainSelector WS_Physical itemSelectionChanged Net "All Layers"
+\i (00:16:27) generaledit 
+\i (00:16:29) QtSignal m_domainSelector WS_Physical itemSelectionChanged "Physical Constraint Set" +
+\i (00:16:29) QtSignal "All Layers"
+\i (00:16:29) QtSignal m_domainSelector WS_Physical itemClicked "Physical Constraint Set" "All Layers"
+\i (00:16:32) QtSignal m_domainSelector WS_Physical itemSelectionChanged Net "All Layers"
+\i (00:16:32) QtSignal m_domainSelector WS_Physical itemClicked Net "All Layers"
+\i (00:16:38) QtSignal m_dockWsQtWidgetContents m_domainSelector currentChanged Manufacturing
+\i (00:18:44) prmed 
+\i (00:19:00) setwindow form.prmedit
+\i (00:19:00) FORM prmedit route  
+\i (00:19:15) setwindow pcb
+\i (00:19:15) cmgr 
+\i (00:19:15) QtSignal m_domainSelector WS_Physical itemSelectionChanged
+\i (00:19:15) QtSignal m_dockWsQtWidgetContents m_domainSelector currentChanged Electrical
+\i (00:19:15) QtSignal m_dockWsQtWidgetContents m_domainSelector currentChanged
+\i (00:19:15) QtSignal m_dockWsQtWidgetContents m_domainSelector currentChanged Electrical
+\i (00:19:15) QtSignal m_dockWsQtWidgetContents m_domainSelector currentChanged Physical
+\i (00:19:15) QtSignal m_domainSelector WS_Physical itemSelectionChanged Net "All Layers"
+\i (00:19:15) QtSignal Frozen_All_Layers_WorksheetView58 Frozen_All_Layers_WorksheetView58Header sectionMoved +
+\i (00:19:15) QtSignal 0 0 1
+\i (00:19:15) QtSignal Frozen_All_Layers_WorksheetView58 Frozen_All_Layers_WorksheetView58Header sectionMoved +
+\i (00:19:15) QtSignal 1 1 0
+\i (00:19:15) QtSignal All_Layers_WorksheetView58 All_Layers_WorksheetView58Header sectionMoved +
+\i (00:19:15) QtSignal 0 0 1
+\i (00:19:15) QtSignal All_Layers_WorksheetView58 All_Layers_WorksheetView58Header sectionMoved +
+\i (00:19:15) QtSignal 1 1 0
+\i (00:19:15) QtSignal Frozen_All_Layers_WorksheetView58 Frozen_All_Layers_WorksheetView58Header sectionMoved +
+\i (00:19:15) QtSignal 0 1 3
+\i (00:19:15) QtSignal Frozen_All_Layers_WorksheetView58 Frozen_All_Layers_WorksheetView58Header sectionMoved +
+\i (00:19:15) QtSignal 3 3 1
+\i (00:19:15) QtSignal All_Layers_WorksheetView58 All_Layers_WorksheetView58Header sectionMoved +
+\i (00:19:15) QtSignal 0 1 3
+\i (00:19:15) QtSignal All_Layers_WorksheetView58 All_Layers_WorksheetView58Header sectionMoved +
+\i (00:19:15) QtSignal 3 3 1
+\i (00:19:15) QtSignal CCMViewHost58 tableWidget currentChanged tmacontrol
+\i (00:19:15) QtSignal m_domainSelector WS_Physical itemSelectionChanged
+\i (00:19:15) QtSignal m_domainSelector WS_Physical itemSelectionChanged "Physical Constraint Set" +
+\i (00:19:15) QtSignal "All Layers"
+\i (00:19:15) QtSignal Frozen_All_Layers_WorksheetView63 Frozen_All_Layers_WorksheetView63Header sectionMoved +
+\i (00:19:15) QtSignal 0 0 1
+\i (00:19:15) QtSignal Frozen_All_Layers_WorksheetView63 Frozen_All_Layers_WorksheetView63Header sectionMoved +
+\i (00:19:15) QtSignal 1 1 0
+\i (00:19:15) QtSignal All_Layers_WorksheetView63 All_Layers_WorksheetView63Header sectionMoved +
+\i (00:19:15) QtSignal 0 0 1
+\i (00:19:15) QtSignal All_Layers_WorksheetView63 All_Layers_WorksheetView63Header sectionMoved +
+\i (00:19:15) QtSignal 1 1 0
+\i (00:19:15) QtSignal Frozen_All_Layers_WorksheetView63 Frozen_All_Layers_WorksheetView63Header sectionMoved +
+\i (00:19:15) QtSignal 0 1 3
+\i (00:19:15) QtSignal Frozen_All_Layers_WorksheetView63 Frozen_All_Layers_WorksheetView63Header sectionMoved +
+\i (00:19:15) QtSignal 3 3 1
+\i (00:19:15) QtSignal All_Layers_WorksheetView63 All_Layers_WorksheetView63Header sectionMoved +
+\i (00:19:15) QtSignal 0 1 3
+\i (00:19:15) QtSignal All_Layers_WorksheetView63 All_Layers_WorksheetView63Header sectionMoved +
+\i (00:19:15) QtSignal 3 3 1
+\i (00:19:15) QtSignal CCMViewHost63 tableWidget currentChanged tmacontrol
+\i (00:19:15) QtSignal m_domainSelector WS_Physical itemSelectionChanged
+\i (00:19:15) QtSignal m_domainSelector WS_Physical itemSelectionChanged Net "All Layers"
+\i (00:19:23) QtSignal m_domainSelector WS_Physical itemSelectionChanged "Physical Constraint Set" +
+\i (00:19:23) QtSignal "All Layers"
+\i (00:19:23) QtSignal m_domainSelector WS_Physical itemClicked "Physical Constraint Set" "All Layers"
+\i (00:19:32) QtSignal m_dockWsQtWidgetContents m_domainSelector currentChanged Properties
+\i (00:19:36) QtSignal m_dockWsQtWidgetContents m_domainSelector currentChanged Electrical
+\i (00:19:38) QtSignal m_domainSelector WS_Electrical itemSelectionChanged "Electrical Constraint Set" +
+\i (00:19:38) QtSignal Routing
+\i (00:19:38) QtSignal m_domainSelector WS_Electrical itemClicked "Electrical Constraint Set" Routing
+\i (00:19:41) QtSignal m_dockWsQtWidgetContents m_domainSelector currentChanged Physical
+\i (00:19:41) QtSignal m_domainSelector WS_Physical itemSelectionChanged
+\i (00:20:25) xsection 
+\i (00:20:25) QtSignal m_domainSelector WS_Electrical itemSelectionChanged
+\i (00:20:25) QtSignal m_dockWsQtWidgetContents m_domainSelector currentChanged Electrical
+\i (00:20:25) QtSignal m_dockWsQtWidgetContents m_domainSelector currentChanged
+\i (00:20:25) QtSignal m_dockWsQtWidgetContents m_domainSelector currentChanged Electrical
+\i (00:20:44) QtSignal m_stackupsTab m_stackupsTabXSectionView ContextMenu "(TOP,LAYER_FUNCTION)"
+\i (00:20:46) QtFillin ""
+\i (00:20:49) QtSignal inCell text editingFinished 1
+\i (00:20:57) QtSignal MainWindow CCMQtXSectionDlg closed
+\i (00:20:57) QtSignal m_vSplitter m_stackupsTab currentChanged
+\i (00:20:57) QtSignal m_vSplitter m_stackupsTab currentChanged
+\i (00:20:57) QtSignal CCMQtXSectionDlg AddLayerDlg closed
+\i (00:27:17) auto_route 
+\i (00:27:21) setwindow form.vse_armain
+\i (00:27:21) FORM vse_armain close  
+\i (00:27:21) setwindow pcb
+\i (00:27:21) generaledit 
+\i (00:28:59) zoom in 1 
+\i (00:28:59) setwindow pcb
+\i (00:28:59) zoom in 168.2199 117.7539
+\i (00:28:59) trapsize 3534
+\i (00:28:59) zoom in 1 
+\i (00:28:59) setwindow pcb
+\i (00:28:59) zoom in 168.2199 117.7540
+\i (00:28:59) trapsize 1767
+\i (00:28:59) zoom in 1 
+\i (00:28:59) setwindow pcb
+\i (00:28:59) zoom in 168.2200 117.7540
+\i (00:28:59) trapsize 884
+\i (00:28:59) zoom in 1 
+\i (00:28:59) setwindow pcb
+\i (00:28:59) zoom in 168.2200 117.7540
+\i (00:28:59) trapsize 442
+\i (00:28:59) zoom in 1 
+\i (00:28:59) setwindow pcb
+\i (00:28:59) zoom in 168.2200 117.7540
+\i (00:28:59) trapsize 221
+\i (00:28:59) zoom in 1 
+\i (00:28:59) setwindow pcb
+\i (00:28:59) zoom in 168.2200 117.7540
+\i (00:28:59) trapsize 110
+\i (00:28:59) zoom in 1 
+\i (00:28:59) setwindow pcb
+\i (00:28:59) zoom in 168.2200 117.7540
+\i (00:28:59) trapsize 55
+\i (00:29:00) zoom in 1 
+\i (00:29:00) setwindow pcb
+\i (00:29:00) zoom in 168.2200 117.7540
+\i (00:29:00) trapsize 28
+\i (00:29:00) zoom out 1 
+\i (00:29:00) setwindow pcb
+\i (00:29:00) zoom out 168.2200 117.7541
+\i (00:29:00) trapsize 55
+\i (00:29:00) zoom out 1 
+\i (00:29:00) setwindow pcb
+\i (00:29:00) zoom out 168.2200 117.7540
+\i (00:29:00) trapsize 110
+\i (00:29:00) zoom out 1 
+\i (00:29:00) setwindow pcb
+\i (00:29:00) zoom out 168.2200 117.7541
+\i (00:29:00) trapsize 221
+\i (00:29:00) zoom out 1 
+\i (00:29:00) setwindow pcb
+\i (00:29:00) zoom out 168.2200 117.7541
+\i (00:29:00) trapsize 442
+\i (00:29:01) zoom out 1 
+\i (00:29:01) setwindow pcb
+\i (00:29:01) zoom out 168.2201 117.7541
+\i (00:29:01) trapsize 884
+\i (00:29:02) zoom out 1 
+\i (00:29:02) setwindow pcb
+\i (00:29:02) zoom out 168.2201 117.7541
+\i (00:29:02) trapsize 1767
+\i (00:29:09) drag_start grid 170.1638 115.8810
+\i (00:29:09) move 
+\t (00:29:09) last pick:  167.3860 115.7732
+\t (00:29:09) Pick new location for the element(s).
+\i (00:29:12) drag_stop grid 163.5198 108.0001
+\i (00:29:12) generaledit 
+\i (00:29:16) drag_start grid 168.1140 115.3862
+\i (00:29:16) move 
+\t (00:29:16) last pick:  167.3860 115.1890
+\t (00:29:16) Pick new location for the element(s).
+\i (00:29:18) drag_stop grid 166.6651 110.7567
+\i (00:29:18) generaledit 
+\i (00:29:20) pick grid 166.9125 108.4242
+\t (00:29:20) last pick:  167.0050 108.5850
+\i (00:29:22) prepopup 166.9125 108.4242
+\i (00:29:23) pick grid 159.4204 110.6153
+\t (00:29:23) last pick:  159.3850 110.4900
+\i (00:29:25) drag_start grid 149.5958 119.0616
+\i (00:29:25) move 
+\t (00:29:25) last pick:  149.1869 120.3325
+\t (00:29:25) Pick new location for the element(s).
+\i (00:29:26) drag_stop grid 149.2777 115.8457
+\i (00:29:26) generaledit 
+\i (00:29:28) undo 
+\i (00:29:28) trapsize 1767
+\i (00:29:29) generaledit 
+\i (00:29:46) QtSignal CVPLayerGrid CVPBoxAllTop clicked false
+\i (00:29:47) QtSignal CVPLayerGrid CVPBoxAllTop clicked true
+\i (00:29:57) xsection 
+\i (00:29:57) QtSignal m_dockWsQtWidgetContents m_domainSelector currentChanged
+\i (00:29:57) QtSignal m_dockWsQtWidgetContents m_domainSelector currentChanged Electrical
+\i (00:30:03) QtSignal m_stackupsTab m_stackupsTabXSectionView ContextMenu "(TOP,LAYER_FUNCTION)"
+\i (00:30:04) QtFillin ""
+\i (00:30:05) QtSignal m_stackupsTabXSectionView Frozen_m_stackupsTabXSectionView ContextMenu "(TOP,NAME)"
+\i (00:30:08) QtFillin ""
+\i (00:30:24) QtSignal inCell combo CurrentIndexChanged "  Conductor"
+\i (00:30:28) QtSignal m_stackupsTab m_stackupsTabXSectionView ContextMenu "(TOP,LAYER_FUNCTION)"
+\i (00:30:29) QtFillin ""
+\i (00:30:30) QtSignal inCell combo CurrentIndexChanged "  Conductor"
+\i (00:30:34) QtSignal inCell combo CurrentIndexChanged "1mm Copper"
+\i (00:30:34) QtSignal inCell combo CurrentIndexChanged Copper
+\i (00:30:46) QtSignal MainWindow CCMQtXSectionDlg closed
+\i (00:30:46) QtSignal m_vSplitter m_stackupsTab currentChanged
+\i (00:30:46) QtSignal m_vSplitter m_stackupsTab currentChanged
+\i (00:30:46) QtSignal CCMQtXSectionDlg AddLayerDlg closed
+\i (00:30:47) generaledit 
+\i (00:49:49) xsection 
+\i (00:49:49) QtSignal m_dockWsQtWidgetContents m_domainSelector currentChanged
+\i (00:49:49) QtSignal m_dockWsQtWidgetContents m_domainSelector currentChanged Electrical
+\i (00:49:53) QtSignal inCell combo CurrentIndexChanged "  Conductor"
+\i (00:49:56) QtSignal m_stackupsTabXSectionView Frozen_m_stackupsTabXSectionView ContextMenu "(TOP,_)"
+\i (00:49:59) QtFillin ""
+\i (00:50:01) QtSignal m_stackupsTabXSectionView Frozen_m_stackupsTabXSectionView ContextMenu "(TOP,_)"
+\i (00:50:05) QtFillin ""
+\i (00:50:21) QtSignal m_stackupsTabXSectionView Frozen_m_stackupsTabXSectionView ContextMenu "(TOP,NAME)"
+\i (00:50:24) QtFillin ""
+\i (00:50:36) QtSignal inCell combo CurrentIndexChanged "1mm Copper"
+\i (00:50:36) QtSignal inCell combo CurrentIndexChanged Copper
+\i (00:50:52) QtFillin OK
+\i (00:51:16) QtSignal m_stackupsTabXSectionView Frozen_m_stackupsTabXSectionView ContextMenu "(BOTTOM,_)"
+\i (00:51:20) QtFillin ""
+\i (00:51:22) QtSignal m_stackupsTabXSectionView Frozen_m_stackupsTabXSectionView ContextMenu "(TOP,_)"
+\i (00:51:25) QtFillin ""
+\i (00:51:29) QtSignal CCMQtXSectionDlg 59570 triggered
+\i (00:51:33) QtSignal BaseFileDlgWithScope AQFileDialog finished 0
+\i (00:51:45) QtSignal MainWindow CCMQtXSectionDlg closed
+\i (00:51:45) QtSignal m_vSplitter m_stackupsTab currentChanged
+\i (00:51:45) QtSignal m_vSplitter m_stackupsTab currentChanged
+\i (00:51:45) QtSignal CCMQtXSectionDlg AddLayerDlg closed
+\i (00:51:46) generaledit 
+\i (00:53:05) zoom out 1 
+\i (00:53:05) setwindow pcb
+\i (00:53:05) zoom out 139.5945 136.2016
+\i (00:53:05) trapsize 3534
+\i (00:53:05) zoom out 1 
+\i (00:53:05) setwindow pcb
+\i (00:53:05) zoom out 139.5946 136.2015
+\i (00:53:05) trapsize 7068
+\i (00:53:05) zoom out 1 
+\i (00:53:05) setwindow pcb
+\i (00:53:05) zoom out 139.5946 191.5435
+\i (00:53:05) trapsize 14136
+\i (00:53:05) zoom out 1 
+\i (00:53:05) setwindow pcb
+\i (00:53:05) zoom out 139.5946 383.0870
+\i (00:53:05) trapsize 19990
+\i (00:53:05) zoom out 1 
+\i (00:53:05) setwindow pcb
+\i (00:53:05) zoom out 151.9277 386.4988
+\i (00:53:05) trapsize 19990
+\i (00:53:05) zoom out 1 
+\i (00:53:05) setwindow pcb
+\i (00:53:05) zoom out 151.9277 386.4988
+\i (00:53:05) trapsize 19990
+\i (00:53:05) zoom out 1 
+\i (00:53:05) setwindow pcb
+\i (00:53:05) zoom out 151.9277 386.4988
+\i (00:53:05) trapsize 19990
+\i (00:53:06) zoom out 1 
+\i (00:53:06) setwindow pcb
+\i (00:53:06) zoom out 151.9277 386.4988
+\i (00:53:06) trapsize 19990
+\i (00:53:06) zoom out 1 
+\i (00:53:06) setwindow pcb
+\i (00:53:06) zoom out 151.9277 386.4988
+\i (00:53:06) trapsize 19990
+\i (00:53:06) zoom out 1 
+\i (00:53:06) setwindow pcb
+\i (00:53:06) zoom out 151.9277 386.4988
+\i (00:53:06) trapsize 19990
+\i (00:53:06) zoom out 1 
+\i (00:53:06) setwindow pcb
+\i (00:53:06) zoom out 151.9277 386.4988
+\i (00:53:06) trapsize 19990
+\i (00:53:06) zoom out 1 
+\i (00:53:06) setwindow pcb
+\i (00:53:06) zoom out 151.9277 386.4988
+\i (00:53:06) trapsize 19990
+\i (00:53:06) zoom out 1 
+\i (00:53:06) setwindow pcb
+\i (00:53:06) zoom out 151.9277 386.4988
+\i (00:53:06) trapsize 19990
+\i (00:53:06) zoom out 1 
+\i (00:53:06) setwindow pcb
+\i (00:53:06) zoom out 151.9277 386.4988
+\i (00:53:06) trapsize 19990
+\i (00:53:06) zoom out 1 
+\i (00:53:06) setwindow pcb
+\i (00:53:06) zoom out 151.9277 386.4988
+\i (00:53:06) trapsize 19990
+\i (00:53:06) zoom out 1 
+\i (00:53:06) setwindow pcb
+\i (00:53:06) zoom out 151.9277 386.4988
+\i (00:53:06) trapsize 19990
+\i (00:53:06) zoom out 1 
+\i (00:53:06) setwindow pcb
+\i (00:53:06) zoom out 151.9277 386.4988
+\i (00:53:06) trapsize 19990
+\i (00:53:06) zoom out 1 
+\i (00:53:06) setwindow pcb
+\i (00:53:06) zoom out 151.9277 386.4988
+\i (00:53:06) trapsize 19990
+\i (00:53:06) zoom out 1 
+\i (00:53:06) setwindow pcb
+\i (00:53:06) zoom out 151.9277 386.4988
+\i (00:53:06) trapsize 19990
+\i (00:53:06) zoom out 1 
+\i (00:53:06) setwindow pcb
+\i (00:53:06) zoom out 151.9277 386.4988
+\i (00:53:06) trapsize 19990
+\i (00:53:06) zoom out 1 
+\i (00:53:06) setwindow pcb
+\i (00:53:06) zoom out 151.9277 386.4988
+\i (00:53:06) trapsize 19990
+\i (00:53:06) zoom out 1 
+\i (00:53:06) setwindow pcb
+\i (00:53:06) zoom out 151.9277 386.4988
+\i (00:53:06) trapsize 19990
+\i (00:53:06) zoom out 1 
+\i (00:53:06) setwindow pcb
+\i (00:53:06) zoom out 151.9277 386.4988
+\i (00:53:06) trapsize 19990
+\i (00:53:06) zoom out 1 
+\i (00:53:06) setwindow pcb
+\i (00:53:06) zoom out 151.9277 386.4988
+\i (00:53:06) trapsize 19990
+\i (00:53:06) zoom out 1 
+\i (00:53:06) setwindow pcb
+\i (00:53:06) zoom out 151.9277 386.4988
+\i (00:53:06) trapsize 19990
+\i (00:53:06) zoom out 1 
+\i (00:53:06) setwindow pcb
+\i (00:53:06) zoom out 151.9277 386.4988
+\i (00:53:06) trapsize 19990
+\i (00:53:06) zoom out 1 
+\i (00:53:06) setwindow pcb
+\i (00:53:06) zoom out 151.9277 386.4988
+\i (00:53:06) trapsize 19990
+\i (00:53:06) zoom out 1 
+\i (00:53:06) setwindow pcb
+\i (00:53:06) zoom out 151.9277 386.4988
+\i (00:53:06) trapsize 19990
+\i (00:53:06) zoom out 1 
+\i (00:53:06) setwindow pcb
+\i (00:53:06) zoom out 151.9277 386.4988
+\i (00:53:06) trapsize 19990
+\i (00:53:06) zoom out 1 
+\i (00:53:06) setwindow pcb
+\i (00:53:06) zoom out 151.9277 386.4988
+\i (00:53:06) trapsize 19990
+\i (00:53:06) zoom out 1 
+\i (00:53:06) setwindow pcb
+\i (00:53:06) zoom out 151.9277 386.4988
+\i (00:53:06) trapsize 19990
+\i (00:53:10) zoom fit 
+\i (00:53:10) trapsize 1433
+\i (00:53:44) layer priority 
+\i (00:54:00) setwindow form.layerdlg
+\i (00:54:00) FORM layerdlg cancel  
+\i (00:54:17) setwindow pcb
+\i (00:54:17) cmgr 
+\i (00:54:17) QtSignal m_dockWsQtWidgetContents m_domainSelector currentChanged
+\i (00:54:17) QtSignal m_dockWsQtWidgetContents m_domainSelector currentChanged Electrical
+\i (00:54:18) QtSignal m_domainSelector WS_Electrical itemSelectionChanged "Electrical Constraint Set" +
+\i (00:54:18) QtSignal Routing Wiring
+\i (00:54:18) QtSignal Frozen_All_Layers_WorksheetView63 Frozen_All_Layers_WorksheetView63Header sectionMoved +
+\i (00:54:18) QtSignal 0 0 1
+\i (00:54:18) QtSignal Frozen_All_Layers_WorksheetView63 Frozen_All_Layers_WorksheetView63Header sectionMoved +
+\i (00:54:18) QtSignal 1 1 0
+\i (00:54:18) QtSignal All_Layers_WorksheetView63 All_Layers_WorksheetView63Header sectionMoved +
+\i (00:54:18) QtSignal 0 0 1
+\i (00:54:18) QtSignal All_Layers_WorksheetView63 All_Layers_WorksheetView63Header sectionMoved +
+\i (00:54:18) QtSignal 1 1 0
+\i (00:54:18) QtSignal Frozen_All_Layers_WorksheetView63 Frozen_All_Layers_WorksheetView63Header sectionMoved +
+\i (00:54:18) QtSignal 0 1 3
+\i (00:54:18) QtSignal Frozen_All_Layers_WorksheetView63 Frozen_All_Layers_WorksheetView63Header sectionMoved +
+\i (00:54:18) QtSignal 3 3 1
+\i (00:54:18) QtSignal All_Layers_WorksheetView63 All_Layers_WorksheetView63Header sectionMoved +
+\i (00:54:18) QtSignal 0 1 3
+\i (00:54:18) QtSignal All_Layers_WorksheetView63 All_Layers_WorksheetView63Header sectionMoved +
+\i (00:54:18) QtSignal 3 3 1
+\i (00:54:18) QtSignal CCMViewHost63 tableWidget currentChanged tmacontrol
+\i (00:54:18) QtSignal m_dockWsQtWidgetContents m_domainSelector currentChanged Physical
+\i (00:54:18) QtSignal m_domainSelector WS_Physical itemSelectionChanged Net "All Layers"
+\i (00:54:18) QtSignal Frozen_All_Layers_WorksheetView58 Frozen_All_Layers_WorksheetView58Header sectionMoved +
+\i (00:54:18) QtSignal 0 0 1
+\i (00:54:18) QtSignal Frozen_All_Layers_WorksheetView58 Frozen_All_Layers_WorksheetView58Header sectionMoved +
+\i (00:54:18) QtSignal 1 1 0
+\i (00:54:18) QtSignal All_Layers_WorksheetView58 All_Layers_WorksheetView58Header sectionMoved +
+\i (00:54:18) QtSignal 0 0 1
+\i (00:54:18) QtSignal All_Layers_WorksheetView58 All_Layers_WorksheetView58Header sectionMoved +
+\i (00:54:18) QtSignal 1 1 0
+\i (00:54:18) QtSignal Frozen_All_Layers_WorksheetView58 Frozen_All_Layers_WorksheetView58Header sectionMoved +
+\i (00:54:18) QtSignal 0 1 3
+\i (00:54:18) QtSignal Frozen_All_Layers_WorksheetView58 Frozen_All_Layers_WorksheetView58Header sectionMoved +
+\i (00:54:18) QtSignal 3 3 1
+\i (00:54:18) QtSignal All_Layers_WorksheetView58 All_Layers_WorksheetView58Header sectionMoved +
+\i (00:54:18) QtSignal 0 1 3
+\i (00:54:18) QtSignal All_Layers_WorksheetView58 All_Layers_WorksheetView58Header sectionMoved +
+\i (00:54:18) QtSignal 3 3 1
+\i (00:54:18) QtSignal CCMViewHost58 tableWidget currentChanged tmacontrol
+\i (00:54:18) QtSignal m_domainSelector WS_Physical itemSelectionChanged
+\i (00:54:18) QtSignal m_domainSelector WS_Physical itemSelectionChanged "Physical Constraint Set" +
+\i (00:54:18) QtSignal "All Layers"
+\i (00:54:18) QtSignal Frozen_Wiring_WorksheetView8 Frozen_Wiring_WorksheetView8Header sectionMoved +
+\i (00:54:18) QtSignal 0 0 1
+\i (00:54:18) QtSignal Frozen_Wiring_WorksheetView8 Frozen_Wiring_WorksheetView8Header sectionMoved +
+\i (00:54:18) QtSignal 1 1 0
+\i (00:54:18) QtSignal Wiring_WorksheetView8 Wiring_WorksheetView8Header sectionMoved 0 0 1
+\i (00:54:18) QtSignal Wiring_WorksheetView8 Wiring_WorksheetView8Header sectionMoved 1 1 0
+\i (00:54:18) QtSignal Frozen_Wiring_WorksheetView8 Frozen_Wiring_WorksheetView8Header sectionMoved +
+\i (00:54:18) QtSignal 0 1 3
+\i (00:54:18) QtSignal Frozen_Wiring_WorksheetView8 Frozen_Wiring_WorksheetView8Header sectionMoved +
+\i (00:54:18) QtSignal 3 3 1
+\i (00:54:18) QtSignal Wiring_WorksheetView8 Wiring_WorksheetView8Header sectionMoved 0 1 3
+\i (00:54:18) QtSignal Wiring_WorksheetView8 Wiring_WorksheetView8Header sectionMoved 3 3 1
+\i (00:54:18) QtSignal CCMViewHost8 tableWidget currentChanged tmacontrol
+\i (00:54:18) QtSignal m_dockWsQtWidgetContents m_domainSelector currentChanged Electrical
+\i (00:54:18) QtSignal m_domainSelector WS_Electrical itemSelectionChanged
+\i (00:54:18) QtSignal m_domainSelector WS_Electrical itemSelectionChanged "Electrical Constraint Set" +
+\i (00:54:18) QtSignal Routing Wiring
+\i (00:54:18) generaledit 
+\i (00:54:26) QtSignal m_domainSelector WS_Electrical itemSelectionChanged Net Routing
+\i (00:54:27) QtSignal m_domainSelector WS_Electrical itemClicked Net Routing
+\i (00:54:50) setwindow form.layersets
+\i (00:54:50) FORM layersets cancel  
+   (00:54:50) Loading cmds.cxt 
+\i (00:55:01) setwindow pcb
+\i (00:55:01) QtSignal CCMVTabbediewHost25 CCMViewHost26 keyPressEvent 16777248 33554432 false 1
+\i (00:55:17) QtSignal m_domainSelector WS_Electrical itemSelectionChanged "Electrical Constraint Set" +
+\i (00:55:17) QtSignal Routing Wiring
+\i (00:55:17) QtSignal m_domainSelector WS_Electrical itemClicked "Electrical Constraint Set" Routing +
+\i (00:55:17) QtSignal Wiring
+\i (00:55:24) QtSignal m_dockWsQtWidgetContents m_domainSelector currentChanged Physical
+\i (00:55:24) QtSignal m_domainSelector WS_Physical itemSelectionChanged
+\i (00:55:26) QtSignal m_domainSelector WS_Physical itemSelectionChanged "Physical Constraint Set" +
+\i (00:55:26) QtSignal "All Layers"
+\i (00:55:26) QtSignal m_domainSelector WS_Physical itemClicked "Physical Constraint Set" "All Layers"
+\i (00:55:46) QtSignal m_domainSelector WS_Physical itemSelectionChanged Net "All Layers"
+\i (00:55:47) QtSignal m_domainSelector WS_Physical itemClicked Net "All Layers"
+\i (00:55:51) QtSignal m_domainSelector WS_Physical itemSelectionChanged Region "All Layers"
+\i (00:55:51) QtSignal m_domainSelector WS_Physical itemClicked Region "All Layers"
+\i (00:55:52) QtSignal m_domainSelector WS_Physical itemSelectionChanged "Physical Constraint Set" +
+\i (00:55:52) QtSignal "All Layers"
+\i (00:55:52) QtSignal m_domainSelector WS_Physical itemClicked "Physical Constraint Set" "All Layers"
+\i (00:55:55) QtSignal m_dockWsQtWidgetContents m_domainSelector currentChanged Manufacturing
+\i (00:55:59) QtSignal m_domainSelector WS_Manufacturing itemSelectionChanged "Design for Fabrication" +
+\i (00:55:59) QtSignal Design
+\i (00:55:59) QtSignal m_domainSelector WS_Manufacturing itemClicked "Design for Fabrication" Design
+\i (00:56:01) QtSignal m_domainSelector WS_Manufacturing itemSelectionChanged "Design for Fabrication" +
+\i (00:56:01) QtSignal Design "Copper Features"
+\i (00:56:01) QtSignal m_domainSelector WS_Manufacturing itemClicked "Design for Fabrication" Design +
+\i (00:56:01) QtSignal "Copper Features"
+\i (00:56:04) QtSignal m_dockWsQtWidgetContents m_domainSelector currentChanged Properties
+\i (00:57:21) xsection 
+\i (00:57:21) QtSignal m_domainSelector WS_Electrical itemSelectionChanged
+\i (00:57:21) QtSignal m_domainSelector WS_Physical itemSelectionChanged
+\i (00:57:21) QtSignal m_domainSelector WS_Manufacturing itemSelectionChanged
+\i (00:57:21) QtSignal m_dockWsQtWidgetContents m_domainSelector currentChanged Electrical
+\i (00:57:21) QtSignal m_dockWsQtWidgetContents m_domainSelector currentChanged
+\i (00:57:21) QtSignal m_dockWsQtWidgetContents m_domainSelector currentChanged Electrical
+\i (00:57:25) QtSignal MainWindow CCMQtXSectionDlg closed
+\i (00:57:25) QtSignal m_vSplitter m_stackupsTab currentChanged
+\i (00:57:25) QtSignal m_vSplitter m_stackupsTab currentChanged
+\i (00:57:25) QtSignal CCMQtXSectionDlg AddLayerDlg closed
+\i (00:57:26) generaledit 
+\i (00:57:28) cmgr 
+\i (00:57:28) QtSignal m_dockWsQtWidgetContents m_domainSelector currentChanged
+\i (00:57:28) QtSignal m_dockWsQtWidgetContents m_domainSelector currentChanged Electrical
+\i (00:57:28) QtSignal m_dockWsQtWidgetContents m_domainSelector currentChanged Manufacturing
+\i (00:57:28) QtSignal m_domainSelector WS_Manufacturing itemSelectionChanged "Design for Fabrication" +
+\i (00:57:28) QtSignal Design "Copper Features"
+\i (00:57:28) QtSignal Frozen_Wiring_WorksheetView26 Frozen_Wiring_WorksheetView26Header sectionMoved +
+\i (00:57:28) QtSignal 0 0 1
+\i (00:57:29) QtSignal Frozen_Wiring_WorksheetView26 Frozen_Wiring_WorksheetView26Header sectionMoved +
+\i (00:57:29) QtSignal 1 1 0
+\i (00:57:29) QtSignal Wiring_WorksheetView26 Wiring_WorksheetView26Header sectionMoved 0 0 1
+\i (00:57:29) QtSignal Wiring_WorksheetView26 Wiring_WorksheetView26Header sectionMoved 1 1 0
+\i (00:57:29) QtSignal Frozen_Wiring_WorksheetView26 Frozen_Wiring_WorksheetView26Header sectionMoved +
+\i (00:57:29) QtSignal 0 1 3
+\i (00:57:29) QtSignal Frozen_Wiring_WorksheetView26 Frozen_Wiring_WorksheetView26Header sectionMoved +
+\i (00:57:29) QtSignal 3 3 1
+\i (00:57:29) QtSignal Wiring_WorksheetView26 Wiring_WorksheetView26Header sectionMoved 0 1 3
+\i (00:57:29) QtSignal Wiring_WorksheetView26 Wiring_WorksheetView26Header sectionMoved 3 3 1
+\i (00:57:29) QtSignal CCMViewHost26 tableWidget currentChanged tmacontrol
+\i (00:57:29) QtSignal m_dockWsQtWidgetContents m_domainSelector currentChanged Electrical
+\i (00:57:29) QtSignal m_domainSelector WS_Electrical itemSelectionChanged Net Routing Wiring
+\i (00:57:29) QtSignal Frozen_Wiring_WorksheetView8 Frozen_Wiring_WorksheetView8Header sectionMoved +
+\i (00:57:29) QtSignal 0 0 1
+\i (00:57:29) QtSignal Frozen_Wiring_WorksheetView8 Frozen_Wiring_WorksheetView8Header sectionMoved +
+\i (00:57:29) QtSignal 1 1 0
+\i (00:57:29) QtSignal Wiring_WorksheetView8 Wiring_WorksheetView8Header sectionMoved 0 0 1
+\i (00:57:29) QtSignal Wiring_WorksheetView8 Wiring_WorksheetView8Header sectionMoved 1 1 0
+\i (00:57:29) QtSignal Frozen_Wiring_WorksheetView8 Frozen_Wiring_WorksheetView8Header sectionMoved +
+\i (00:57:29) QtSignal 0 1 3
+\i (00:57:29) QtSignal Frozen_Wiring_WorksheetView8 Frozen_Wiring_WorksheetView8Header sectionMoved +
+\i (00:57:29) QtSignal 3 3 1
+\i (00:57:29) QtSignal Wiring_WorksheetView8 Wiring_WorksheetView8Header sectionMoved 0 1 3
+\i (00:57:29) QtSignal Wiring_WorksheetView8 Wiring_WorksheetView8Header sectionMoved 3 3 1
+\i (00:57:29) QtSignal CCMViewHost8 tableWidget currentChanged tmacontrol
+\i (00:57:29) QtSignal m_domainSelector WS_Electrical itemSelectionChanged
+\i (00:57:29) QtSignal m_domainSelector WS_Electrical itemSelectionChanged "Electrical Constraint Set" +
+\i (00:57:29) QtSignal Routing Wiring
+\i (00:57:29) QtSignal Frozen_All_Layers_WorksheetView63 Frozen_All_Layers_WorksheetView63Header sectionMoved +
+\i (00:57:29) QtSignal 0 0 1
+\i (00:57:29) QtSignal Frozen_All_Layers_WorksheetView63 Frozen_All_Layers_WorksheetView63Header sectionMoved +
+\i (00:57:29) QtSignal 1 1 0
+\i (00:57:29) QtSignal All_Layers_WorksheetView63 All_Layers_WorksheetView63Header sectionMoved +
+\i (00:57:29) QtSignal 0 0 1
+\i (00:57:29) QtSignal All_Layers_WorksheetView63 All_Layers_WorksheetView63Header sectionMoved +
+\i (00:57:29) QtSignal 1 1 0
+\i (00:57:29) QtSignal Frozen_All_Layers_WorksheetView63 Frozen_All_Layers_WorksheetView63Header sectionMoved +
+\i (00:57:29) QtSignal 0 1 3
+\i (00:57:29) QtSignal Frozen_All_Layers_WorksheetView63 Frozen_All_Layers_WorksheetView63Header sectionMoved +
+\i (00:57:29) QtSignal 3 3 1
+\i (00:57:29) QtSignal All_Layers_WorksheetView63 All_Layers_WorksheetView63Header sectionMoved +
+\i (00:57:29) QtSignal 0 1 3
+\i (00:57:29) QtSignal All_Layers_WorksheetView63 All_Layers_WorksheetView63Header sectionMoved +
+\i (00:57:29) QtSignal 3 3 1
+\i (00:57:29) QtSignal CCMViewHost63 tableWidget currentChanged tmacontrol
+\i (00:57:29) QtSignal m_dockWsQtWidgetContents m_domainSelector currentChanged Physical
+\i (00:57:29) QtSignal m_domainSelector WS_Physical itemSelectionChanged Net "All Layers"
+\i (00:57:29) QtSignal Frozen_All_Layers_WorksheetView70 Frozen_All_Layers_WorksheetView70Header sectionMoved +
+\i (00:57:29) QtSignal 0 0 1
+\i (00:57:29) QtSignal Frozen_All_Layers_WorksheetView70 Frozen_All_Layers_WorksheetView70Header sectionMoved +
+\i (00:57:29) QtSignal 1 1 0
+\i (00:57:29) QtSignal All_Layers_WorksheetView70 All_Layers_WorksheetView70Header sectionMoved +
+\i (00:57:29) QtSignal 0 0 1
+\i (00:57:29) QtSignal All_Layers_WorksheetView70 All_Layers_WorksheetView70Header sectionMoved +
+\i (00:57:29) QtSignal 1 1 0
+\i (00:57:29) QtSignal Frozen_All_Layers_WorksheetView70 Frozen_All_Layers_WorksheetView70Header sectionMoved +
+\i (00:57:29) QtSignal 0 1 3
+\i (00:57:29) QtSignal Frozen_All_Layers_WorksheetView70 Frozen_All_Layers_WorksheetView70Header sectionMoved +
+\i (00:57:29) QtSignal 3 3 1
+\i (00:57:29) QtSignal All_Layers_WorksheetView70 All_Layers_WorksheetView70Header sectionMoved +
+\i (00:57:29) QtSignal 0 1 3
+\i (00:57:29) QtSignal All_Layers_WorksheetView70 All_Layers_WorksheetView70Header sectionMoved +
+\i (00:57:29) QtSignal 3 3 1
+\i (00:57:29) QtSignal CCMViewHost70 tableWidget currentChanged tmacontrol
+\i (00:57:29) QtSignal m_domainSelector WS_Physical itemSelectionChanged
+\i (00:57:29) QtSignal m_domainSelector WS_Physical itemSelectionChanged Region "All Layers"
+\i (00:57:29) QtSignal Frozen_All_Layers_WorksheetView58 Frozen_All_Layers_WorksheetView58Header sectionMoved +
+\i (00:57:29) QtSignal 0 0 1
+\i (00:57:29) QtSignal Frozen_All_Layers_WorksheetView58 Frozen_All_Layers_WorksheetView58Header sectionMoved +
+\i (00:57:29) QtSignal 1 1 0
+\i (00:57:29) QtSignal All_Layers_WorksheetView58 All_Layers_WorksheetView58Header sectionMoved +
+\i (00:57:29) QtSignal 0 0 1
+\i (00:57:29) QtSignal All_Layers_WorksheetView58 All_Layers_WorksheetView58Header sectionMoved +
+\i (00:57:29) QtSignal 1 1 0
+\i (00:57:29) QtSignal Frozen_All_Layers_WorksheetView58 Frozen_All_Layers_WorksheetView58Header sectionMoved +
+\i (00:57:29) QtSignal 0 1 3
+\i (00:57:29) QtSignal Frozen_All_Layers_WorksheetView58 Frozen_All_Layers_WorksheetView58Header sectionMoved +
+\i (00:57:29) QtSignal 3 3 1
+\i (00:57:29) QtSignal All_Layers_WorksheetView58 All_Layers_WorksheetView58Header sectionMoved +
+\i (00:57:29) QtSignal 0 1 3
+\i (00:57:29) QtSignal All_Layers_WorksheetView58 All_Layers_WorksheetView58Header sectionMoved +
+\i (00:57:29) QtSignal 3 3 1
+\i (00:57:29) QtSignal CCMViewHost58 tableWidget currentChanged tmacontrol
+\i (00:57:29) QtSignal m_domainSelector WS_Physical itemSelectionChanged
+\i (00:57:29) QtSignal m_domainSelector WS_Physical itemSelectionChanged "Physical Constraint Set" +
+\i (00:57:29) QtSignal "All Layers"
+\i (00:57:29) QtSignal Frozen_Copper_Features_MainView415 Frozen_Copper_Features_MainView415Header sectionMoved +
+\i (00:57:29) QtSignal 0 0 1
+\i (00:57:29) QtSignal Frozen_Copper_Features_MainView415 Frozen_Copper_Features_MainView415Header sectionMoved +
+\i (00:57:29) QtSignal 1 1 0
+\i (00:57:29) QtSignal Copper_Features_MainView415 Copper_Features_MainView415Header sectionMoved +
+\i (00:57:29) QtSignal 0 0 1
+\i (00:57:29) QtSignal Copper_Features_MainView415 Copper_Features_MainView415Header sectionMoved +
+\i (00:57:29) QtSignal 1 1 0
+\i (00:57:29) QtSignal m_dockWsQtWidgetContents m_domainSelector currentChanged Manufacturing
+\i (00:57:29) QtSignal m_domainSelector WS_Manufacturing itemSelectionChanged
+\i (00:57:29) QtSignal m_domainSelector WS_Manufacturing itemSelectionChanged "Design for Fabrication" +
+\i (00:57:29) QtSignal Design "Copper Features"
+\i (00:57:29) generaledit 
+\i (00:57:36) QtSignal m_dockWsQtWidgetContents m_domainSelector currentChanged Physical
+\i (00:57:36) QtSignal m_domainSelector WS_Physical itemSelectionChanged
+\i (00:57:37) QtSignal m_domainSelector WS_Physical itemSelectionChanged "Physical Constraint Set" +
+\i (00:57:37) QtSignal "All Layers"
+\i (00:57:37) QtSignal m_domainSelector WS_Physical itemClicked "Physical Constraint Set" "All Layers"
+\i (00:58:03) QtSignal inCell combo CurrentIndexChanged TRUE
+\i (00:58:04) QtSignal inCell combo CurrentIndexChanged FALSE
+\i (00:58:08) QtSignal m_dockWsQtWidgetContents m_domainSelector currentChanged Manufacturing
+\i (00:58:08) QtSignal m_domainSelector WS_Manufacturing itemSelectionChanged
+\i (00:58:08) QtSignal m_domainSelector WS_Manufacturing itemSelectionChanged "Design for Fabrication" +
+\i (00:58:08) QtSignal Design "Copper Features"
+\i (00:58:19) auto_route 
+\i (00:58:22) setwindow form.vse_armain
+\i (00:58:22) FORM vse_armain execute  
+\i (00:58:33) FORM vse_armain undo  
+\i (00:58:42) FORM vse_armain setup_routinglayers cell ena_top 
+\i (00:58:43) FORM vse_armain setup_routinglayers change ena_top no 
+\i (00:58:45) FORM vse_armain execute  
+\i (00:58:52) FORM vse_armain execute  
+\i (00:58:54) FORM vse_armain execute  
+\i (00:59:00) FORM vse_armain setup_routinglayers change ena_top yes 
+\i (00:59:02) FORM vse_armain setup_routinglayers cell dir_bottom 
+\i (00:59:05) FORM vse_armain setup_routinglayers change dir_bottom Orthogonal 
+\i (00:59:05) FORM vse_armain setup_routinglayers cell protect_bottom 
+\i (00:59:11) FORM vse_armain execute  
+\i (00:59:19) FORM vse_armain setup_routinglayers cell dir_top 
+\i (00:59:22) FORM vse_armain setup_routinglayers cell ena_top 
+\i (00:59:22) FORM vse_armain setup_routinglayers change ena_top no 
+\i (00:59:24) FORM vse_armain execute  
+\i (00:59:33) FORM vse_armain close  
+\i (00:59:33) setwindow pcb
+\i (00:59:33) generaledit 
+\i (00:59:37) unrats all 
+\i (00:59:37) generaledit 
+\i (00:59:49) cmgr 
+\i (00:59:49) QtSignal m_domainSelector WS_Electrical itemSelectionChanged
+\i (00:59:49) QtSignal m_domainSelector WS_Physical itemSelectionChanged
+\i (00:59:49) QtSignal m_domainSelector WS_Manufacturing itemSelectionChanged
+\i (00:59:49) QtSignal m_dockWsQtWidgetContents m_domainSelector currentChanged Electrical
+\i (00:59:49) QtSignal m_dockWsQtWidgetContents m_domainSelector currentChanged
+\i (00:59:49) QtSignal m_dockWsQtWidgetContents m_domainSelector currentChanged Electrical
+\i (00:59:49) QtSignal m_dockWsQtWidgetContents m_domainSelector currentChanged Physical
+\i (00:59:49) QtSignal m_domainSelector WS_Physical itemSelectionChanged "Physical Constraint Set" +
+\i (00:59:49) QtSignal "All Layers"
+\i (00:59:49) QtSignal Frozen_Wiring_WorksheetView26 Frozen_Wiring_WorksheetView26Header sectionMoved +
+\i (00:59:49) QtSignal 0 0 1
+\i (00:59:49) QtSignal Frozen_Wiring_WorksheetView26 Frozen_Wiring_WorksheetView26Header sectionMoved +
+\i (00:59:49) QtSignal 1 1 0
+\i (00:59:49) QtSignal Wiring_WorksheetView26 Wiring_WorksheetView26Header sectionMoved 0 0 1
+\i (00:59:49) QtSignal Wiring_WorksheetView26 Wiring_WorksheetView26Header sectionMoved 1 1 0
+\i (00:59:49) QtSignal Frozen_Wiring_WorksheetView26 Frozen_Wiring_WorksheetView26Header sectionMoved +
+\i (00:59:49) QtSignal 0 1 3
+\i (00:59:49) QtSignal Frozen_Wiring_WorksheetView26 Frozen_Wiring_WorksheetView26Header sectionMoved +
+\i (00:59:49) QtSignal 3 3 1
+\i (00:59:49) QtSignal Wiring_WorksheetView26 Wiring_WorksheetView26Header sectionMoved 0 1 3
+\i (00:59:49) QtSignal Wiring_WorksheetView26 Wiring_WorksheetView26Header sectionMoved 3 3 1
+\i (00:59:49) QtSignal CCMViewHost26 tableWidget currentChanged tmacontrol
+\i (00:59:49) QtSignal m_dockWsQtWidgetContents m_domainSelector currentChanged Electrical
+\i (00:59:49) QtSignal m_domainSelector WS_Electrical itemSelectionChanged Net Routing Wiring
+\i (00:59:49) QtSignal Frozen_Wiring_WorksheetView8 Frozen_Wiring_WorksheetView8Header sectionMoved +
+\i (00:59:49) QtSignal 0 0 1
+\i (00:59:49) QtSignal Frozen_Wiring_WorksheetView8 Frozen_Wiring_WorksheetView8Header sectionMoved +
+\i (00:59:49) QtSignal 1 1 0
+\i (00:59:49) QtSignal Wiring_WorksheetView8 Wiring_WorksheetView8Header sectionMoved 0 0 1
+\i (00:59:49) QtSignal Wiring_WorksheetView8 Wiring_WorksheetView8Header sectionMoved 1 1 0
+\i (00:59:49) QtSignal Frozen_Wiring_WorksheetView8 Frozen_Wiring_WorksheetView8Header sectionMoved +
+\i (00:59:49) QtSignal 0 1 3
+\i (00:59:49) QtSignal Frozen_Wiring_WorksheetView8 Frozen_Wiring_WorksheetView8Header sectionMoved +
+\i (00:59:49) QtSignal 3 3 1
+\i (00:59:49) QtSignal Wiring_WorksheetView8 Wiring_WorksheetView8Header sectionMoved 0 1 3
+\i (00:59:49) QtSignal Wiring_WorksheetView8 Wiring_WorksheetView8Header sectionMoved 3 3 1
+\i (00:59:49) QtSignal CCMViewHost8 tableWidget currentChanged tmacontrol
+\i (00:59:49) QtSignal m_domainSelector WS_Electrical itemSelectionChanged
+\i (00:59:49) QtSignal m_domainSelector WS_Electrical itemSelectionChanged "Electrical Constraint Set" +
+\i (00:59:49) QtSignal Routing Wiring
+\i (00:59:50) QtSignal Frozen_All_Layers_WorksheetView63 Frozen_All_Layers_WorksheetView63Header sectionMoved +
+\i (00:59:50) QtSignal 0 0 1
+\i (00:59:50) QtSignal Frozen_All_Layers_WorksheetView63 Frozen_All_Layers_WorksheetView63Header sectionMoved +
+\i (00:59:50) QtSignal 1 1 0
+\i (00:59:50) QtSignal All_Layers_WorksheetView63 All_Layers_WorksheetView63Header sectionMoved +
+\i (00:59:50) QtSignal 0 0 1
+\i (00:59:50) QtSignal All_Layers_WorksheetView63 All_Layers_WorksheetView63Header sectionMoved +
+\i (00:59:50) QtSignal 1 1 0
+\i (00:59:50) QtSignal Frozen_All_Layers_WorksheetView63 Frozen_All_Layers_WorksheetView63Header sectionMoved +
+\i (00:59:50) QtSignal 0 1 3
+\i (00:59:50) QtSignal Frozen_All_Layers_WorksheetView63 Frozen_All_Layers_WorksheetView63Header sectionMoved +
+\i (00:59:50) QtSignal 3 3 1
+\i (00:59:50) QtSignal All_Layers_WorksheetView63 All_Layers_WorksheetView63Header sectionMoved +
+\i (00:59:50) QtSignal 0 1 3
+\i (00:59:50) QtSignal All_Layers_WorksheetView63 All_Layers_WorksheetView63Header sectionMoved +
+\i (00:59:50) QtSignal 3 3 1
+\i (00:59:50) QtSignal CCMViewHost63 tableWidget currentChanged tmacontrol
+\i (00:59:50) QtSignal m_dockWsQtWidgetContents m_domainSelector currentChanged Physical
+\i (00:59:50) QtSignal m_domainSelector WS_Physical itemSelectionChanged
+\i (00:59:50) QtSignal m_domainSelector WS_Physical itemSelectionChanged Net "All Layers"
+\i (00:59:50) QtSignal Frozen_All_Layers_WorksheetView70 Frozen_All_Layers_WorksheetView70Header sectionMoved +
+\i (00:59:50) QtSignal 0 0 1
+\i (00:59:50) QtSignal Frozen_All_Layers_WorksheetView70 Frozen_All_Layers_WorksheetView70Header sectionMoved +
+\i (00:59:50) QtSignal 1 1 0
+\i (00:59:50) QtSignal All_Layers_WorksheetView70 All_Layers_WorksheetView70Header sectionMoved +
+\i (00:59:50) QtSignal 0 0 1
+\i (00:59:50) QtSignal All_Layers_WorksheetView70 All_Layers_WorksheetView70Header sectionMoved +
+\i (00:59:50) QtSignal 1 1 0
+\i (00:59:50) QtSignal Frozen_All_Layers_WorksheetView70 Frozen_All_Layers_WorksheetView70Header sectionMoved +
+\i (00:59:50) QtSignal 0 1 3
+\i (00:59:50) QtSignal Frozen_All_Layers_WorksheetView70 Frozen_All_Layers_WorksheetView70Header sectionMoved +
+\i (00:59:50) QtSignal 3 3 1
+\i (00:59:50) QtSignal All_Layers_WorksheetView70 All_Layers_WorksheetView70Header sectionMoved +
+\i (00:59:50) QtSignal 0 1 3
+\i (00:59:50) QtSignal All_Layers_WorksheetView70 All_Layers_WorksheetView70Header sectionMoved +
+\i (00:59:50) QtSignal 3 3 1
+\i (00:59:50) QtSignal CCMViewHost70 tableWidget currentChanged tmacontrol
+\i (00:59:50) QtSignal m_domainSelector WS_Physical itemSelectionChanged
+\i (00:59:50) QtSignal m_domainSelector WS_Physical itemSelectionChanged Region "All Layers"
+\i (00:59:50) QtSignal Frozen_Copper_Features_MainView415 Frozen_Copper_Features_MainView415Header sectionMoved +
+\i (00:59:50) QtSignal 0 0 1
+\i (00:59:50) QtSignal Frozen_Copper_Features_MainView415 Frozen_Copper_Features_MainView415Header sectionMoved +
+\i (00:59:50) QtSignal 1 1 0
+\i (00:59:50) QtSignal Copper_Features_MainView415 Copper_Features_MainView415Header sectionMoved +
+\i (00:59:50) QtSignal 0 0 1
+\i (00:59:50) QtSignal Copper_Features_MainView415 Copper_Features_MainView415Header sectionMoved +
+\i (00:59:50) QtSignal 1 1 0
+\i (00:59:50) QtSignal m_dockWsQtWidgetContents m_domainSelector currentChanged Manufacturing
+\i (00:59:50) QtSignal m_domainSelector WS_Manufacturing itemSelectionChanged "Design for Fabrication" +
+\i (00:59:50) QtSignal Design "Copper Features"
+\i (00:59:50) QtSignal Frozen_All_Layers_WorksheetView58 Frozen_All_Layers_WorksheetView58Header sectionMoved +
+\i (00:59:50) QtSignal 0 0 1
+\i (00:59:50) QtSignal Frozen_All_Layers_WorksheetView58 Frozen_All_Layers_WorksheetView58Header sectionMoved +
+\i (00:59:50) QtSignal 1 1 0
+\i (00:59:50) QtSignal All_Layers_WorksheetView58 All_Layers_WorksheetView58Header sectionMoved +
+\i (00:59:50) QtSignal 0 0 1
+\i (00:59:50) QtSignal All_Layers_WorksheetView58 All_Layers_WorksheetView58Header sectionMoved +
+\i (00:59:50) QtSignal 1 1 0
+\i (00:59:50) QtSignal Frozen_All_Layers_WorksheetView58 Frozen_All_Layers_WorksheetView58Header sectionMoved +
+\i (00:59:50) QtSignal 0 1 3
+\i (00:59:50) QtSignal Frozen_All_Layers_WorksheetView58 Frozen_All_Layers_WorksheetView58Header sectionMoved +
+\i (00:59:50) QtSignal 3 3 1
+\i (00:59:50) QtSignal All_Layers_WorksheetView58 All_Layers_WorksheetView58Header sectionMoved +
+\i (00:59:50) QtSignal 0 1 3
+\i (00:59:50) QtSignal All_Layers_WorksheetView58 All_Layers_WorksheetView58Header sectionMoved +
+\i (00:59:50) QtSignal 3 3 1
+\i (00:59:50) QtSignal CCMViewHost58 tableWidget currentChanged tmacontrol
+\i (00:59:50) QtSignal m_dockWsQtWidgetContents m_domainSelector currentChanged Physical
+\i (00:59:50) QtSignal m_domainSelector WS_Physical itemSelectionChanged
+\i (00:59:50) QtSignal m_domainSelector WS_Physical itemSelectionChanged "Physical Constraint Set" +
+\i (00:59:50) QtSignal "All Layers"
+\i (00:59:50) generaledit 
+\i (01:00:24) QtSignal inCell combo CurrentIndexChanged TRUE
+\i (01:00:56) QtSignal inCell combo CurrentIndexChanged TRUE
+\i (01:00:56) QtSignal inCell combo CurrentIndexChanged FALSE
+\i (01:00:57) QtSignal inCell combo CurrentIndexChanged TRUE
+\i (01:01:33) specctra checks 
+\i (01:01:33) generaledit 
+\i (01:01:40) setwindow text
+\i (01:01:40) close
+\i (01:01:50) setwindow pcb
+\i (01:01:50) auto_route 
+\i (01:01:57) setwindow form.vse_armain
+\i (01:01:57) FORM vse_armain execute  
+\i (01:02:19) FORM vse_armain close  
+\i (01:02:20) setwindow pcb
+\i (01:02:20) generaledit 
+\i (01:02:26) plot setup 
+\i (01:02:29) setwindow form.fpfileplotsetup
+\i (01:02:29) FORM fpfileplotsetup cancel  
+\i (01:02:29) setwindow pcb
+\i (01:02:29) generaledit 
+\i (01:02:31) save 
+\i (01:02:33) fillin yes 
+\t (01:02:33) > Sending response DoneOpenBoard
+\i (01:02:34) generaledit 
+\i (01:02:37) plot preview 
+\i (01:02:40) fillin confirm
+\i (01:02:43) plot setup 
+\i (01:02:48) setwindow form.fpfileplotsetup
+\i (01:02:48) FORM fpfileplotsetup done  
+\i (01:02:48) setwindow pcb
+\i (01:02:48) generaledit 
+\i (01:04:39) plot preview 
+\i (01:04:42) fillin confirm
+\i (01:04:46) plot setup 
+\i (01:04:49) setwindow form.fpfileplotsetup
+\i (01:04:49) FORM fpfileplotsetup windows  
+\i (01:04:52) FORM fpfileplotsetup general  
+\i (01:05:00) FORM fpfileplotsetup done  
+\i (01:05:00) setwindow pcb
+\i (01:05:00) generaledit 
+\i (01:05:09) plot 
+\i (01:05:16) plotwint initialize "Microsoft Print to PDF"
+\i (01:05:16) plotwint orientation 1
+\i (01:05:16) plotwint papername "A4"
+\i (01:05:16) plotwint copies 1
+\i (01:05:16) plotwint defaultsource 15
+\i (01:05:16) plotwint printquality 600
+\i (01:05:16) plotwint color 2
+\i (01:05:16) plotwint execute
+\i (01:05:24) plot preview 
+\i (01:08:11) pdf out 
+\i (01:08:17) setwindow form.pdf_out
+\i (01:08:17) FORM pdf_out export  
+\w (01:08:17) No film record selected.
+\i (01:08:21) FORM pdf_out export  
+\w (01:08:21) No film record selected.
+\i (01:08:27) FORM pdf_out artwork  
+\i (01:08:30) FORM pdf_out pdftree  BOTTOM 
+\i (01:08:33) FORM pdf_out pdftree 'MULTISEL YES' BOTTOM 
+\i (01:08:34) FORM pdf_out pdftree  TOP 
+\i (01:08:35) FORM pdf_out pdftree 'MULTISEL YES' TOP 
+\i (01:08:37) FORM pdf_out selectall  
+\i (01:08:46) FORM pdf_out export  
+\t (01:08:46) Starting Exporting PDF File...
+\t (01:08:47) PDF output completed.
+\i (01:09:39) FORM pdf_out cancel  
+\i (01:09:39) setwindow pcb
+\i (01:09:39) generaledit 
+\i (01:09:43) exit 
+\t (01:09:44)     Journal end - Sun Apr  4 13:12:06 2021

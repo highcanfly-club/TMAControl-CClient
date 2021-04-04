@@ -1,7 +1,7 @@
 # TMAControl-CClient
 
 
-# Balise fonctionnelle
+# Working controler
 ![schematic](https://github.com/eltorio/TMAControl-CClient/blob/main/hardware/BaliseTMA.jpg?raw=true)
 # Installation
   First of all you must have your Raspberry Pi computer up and connected to the Internet. There are plenty of tutorials for doing that. You can connect to the network via ethernet (easy), wifi, gprs/umts/lte or via exotic methods. 
@@ -16,6 +16,8 @@
   Orcad Capture Lite (free version) project can be found in hardware sub directory
 
   ![schematic](https://github.com/eltorio/TMAControl-CClient/blob/main/hardware/screenshot.png?raw=true)
+  ![schematic](https://github.com/eltorio/TMAControl-CClient/blob/main/hardware/TMACONTROL-power.png?raw=true)
+  ![schematic](https://github.com/eltorio/TMAControl-CClient/blob/main/hardware/TMACONTROL-header.png?raw=true)
 
   powering the Motorola radio is done via RPi pin #38 (GPIO.28) and a 12v relay drived via a NPN transistor, this is for avoiding to stay on emission in case of a crash (PTT is active low). So a crash on the RPi side can turn on the PTT.
   But with the security relay, if the rPi crash, the watchdog will reboot the Pi and the GPIO will be reset to 0 so the radio will be turn off. If app restarts, the PTT will be rise high and the radio will be turned on.
@@ -82,6 +84,11 @@ autoreconf --install --force && ./configure --with-openssl=/usr --with-sound-fil
   * --with-ptt-pin=29 , wiringpi number of the pin used to control the radio PTT
   * --with-pre-on=1000 -with-post-on=250 time in ms to on the radio beftore and after speaking
 
+## printed circuit
+  A PCB (Cadence Orcad format) can be found in https://github.com/eltorio/TMAControl-CClient/blob/main/hardware/allegro/ directory but it is easy to wire on a prototype board.
+  PCB is designed as a dual-layer PCB but it can be produced as a single layer with only 2 straps on the top layer.
+  
+  ![pcb](https://github.com/eltorio/TMAControl-CClient/blob/main/hardware/PCB.png?raw=true)
 
 ## security
   * first : if the certificate is not coming from an authority agreed on the client, libcurl reports the error

@@ -1,10 +1,16 @@
 (ExpressProject "TMAControl"
   (ProjectVersion "19981106")
-  (SoftwareVersion "17.4-2019 S015 (3921426)  [2/23/2021]-[04/03/21]")
+  (SoftwareVersion "17.4-2019 S015 (3921426)  [2/23/2021]-[04/04/21]")
   (ProjectType "Analog or A/D Mixed Mode")
   (Folder "Design Resources"
     (Folder "Library"
       (File "c:\cadence\spb_17.4\tools\capture\library\pspice\source.olb"
+        (Type "Schematic Library"))
+      (File ".\library\pc816.olb"
+        (Type "Schematic Library"))
+      (File ".\library\raspberry_pi_3_model_b+.olb"
+        (Type "Schematic Library"))
+      (File ".\library\powersupply.olb"
         (Type "Schematic Library")))
     (NoModify)
     (File "tmacontrol.dsn"
@@ -89,8 +95,14 @@
     (DRC_Report_File
        "C:\USERS\GRONA\DOCUMENTS\TMACONTROL-CCLIENT\HARDWARE\TMACONTROL.DRC")
     ("Allegro Netlist Directory" "allegro")
-    ("Allegro Netlist Output Board File" ".\allegro\tmacontrol.brd"))
-  (Folder "Layout")
+    ("Allegro Netlist Output Board File" ".\allegro\tmacontrol.brd")
+    (Board_sim_option "VHDL_flow"))
+  (Folder "Layout"
+    (File ".\allegro\tmacontrol.brd"
+      (Type "Board File")
+      (OutputBoard ".\allegro\tmacontrol.brd")
+      (NetListPath ".\allegro")
+      (ActiveBoard "1")))
   (Folder "Outputs"
     (File ".\tmacontrol-pspicefiles\schematic1\schematic1.net"
       (Type "Report"))
@@ -104,7 +116,10 @@
       (DisplayName "pstxprt.dat"))
     (File ".\allegro\pstchip.dat"
       (Type "Report")
-      (DisplayName "pstchip.dat")))
+      (DisplayName "pstchip.dat"))
+    (File
+       ".\tmacontrol-pspicefiles\tmacontrol rpi3b+ hat\tmacontrol rpi3b+ hat.net"
+      (Type "Report")))
   (Folder "PSpice Resources"
     (Folder "Model Libraries"
       (Sort User))
@@ -114,16 +129,26 @@
       (Sort User))
     (Folder "Simulation Profiles"
       (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
-         ".\tmacontrol-pspicefiles\schematic1\bias.sim"
-        (DisplayName "SCHEMATIC1-bias")
+         ".\tmacontrol-pspicefiles\tmacontrol rpi3b+ hat\bias.sim"
+        (DisplayName "TMAControl RPI3b+ Hat-bias")
         (Type "PSpice Profile"))
-      (ActiveProfile ".\tmacontrol-pspicefiles\schematic1\simulate.sim")
+      (ActiveProfile
+         ".\tmacontrol-pspicefiles\tmacontrol rpi3b+ hat\simulate.sim")
       (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
-         ".\tmacontrol-pspicefiles\schematic1\simulate.sim"
-        (DisplayName "SCHEMATIC1-Simulate")
+         ".\tmacontrol-pspicefiles\tmacontrol rpi3b+ hat\simulate.sim"
+        (DisplayName "TMAControl RPI3b+ Hat-Simulate")
         (Type "PSpice Profile"))))
   (DefaultLibraryBrowseDirectory "library\PSpice")
   (PartMRUSelector
+    ("HEADER 2"
+      (FullPartName "HEADER 2.Normal")
+      (LibraryName "C:\CADENCE\SPB_17.4\TOOLS\CAPTURE\LIBRARY\CONNECTOR.OLB")
+      (DeviceIndex "0"))
+    (12V5V_PSU
+      (FullPartName "12V5V_PSU.Normal")
+      (LibraryName
+         "C:\USERS\GRONA\DOCUMENTS\TMACONTROL-CCLIENT\HARDWARE\LIBRARY\POWERSUPPLY.OLB")
+      (DeviceIndex "0"))
     (RASPBERRY_PI_3_MODEL_B+
       (FullPartName "RASPBERRY_PI_3_MODEL_B+.Normal")
       (LibraryName
@@ -187,8 +212,7 @@
       (FullPartName "VDC.Normal")
       (LibraryName "..\..\LIBRARY\PSPICE\SOURCE.OLB")
       (DeviceIndex "0")))
-  (LastUsedLibraryBrowseDirectory
-     "C:\Users\grona\Documents\TMAControl-CClient\hardware\Library")
+  (LastUsedLibraryBrowseDirectory "C:\Cadence\SPB_17.4\tools\capture\library")
   (MPSSessionName "grona")
   (Folder "Logs"
     (File ".\allegro\netlist.log"
@@ -207,53 +231,59 @@
     (FileView
       (Path "Design Resources")
       (Path "Design Resources"
-         "C:\Users\grona\Documents\TMAControl-CClient\hardware\tmacontrol.dsn")
+         "c:\users\grona\documents\tmacontrol-cclient\hardware\tmacontrol.dsn")
       (Path "Design Resources"
-         "C:\Users\grona\Documents\TMAControl-CClient\hardware\tmacontrol.dsn"
-         "SCHEMATIC1")
+         "c:\users\grona\documents\tmacontrol-cclient\hardware\tmacontrol.dsn"
+         "TMAControl RPI3b+ Hat")
+      (Path "Design Resources"
+         "c:\users\grona\documents\tmacontrol-cclient\hardware\tmacontrol.dsn"
+         "Design Cache")
       (Path "Design Resources" "Library")
+      (Path "Design Resources" "Library"
+         "c:\users\grona\documents\tmacontrol-cclient\hardware\library\pc816.olb")
+      (Path "Design Resources" "Library"
+         "c:\users\grona\documents\tmacontrol-cclient\hardware\library\raspberry_pi_3_model_b+.olb")
+      (Path "Design Resources" "Library" ".\library\powersupply.olb")
       (Path "Layout")
       (Path "Outputs")
-      (Path "Logs")
-      (Select "Design Resources"
-         "C:\Users\grona\Documents\TMAControl-CClient\hardware\tmacontrol.dsn"))
+      (Path "Logs"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -1 -1 0 200 0 600"))
+        (Placement "44 0 1 -1 -1 -1 -1 0 200 0 911"))
       (Tab 0))
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 5 24 5 1093 24 618")
-        (Scroll "-33 0")
-        (Zoom "102")
+        (Placement "44 0 1 -1 -1 5 24 5 1156 24 929")
+        (Scroll "-6 -26")
+        (Zoom "114")
         (Occurrence "/"))
       (Path
          "C:\USERS\GRONA\DOCUMENTS\TMACONTROL-CCLIENT\HARDWARE\TMACONTROL.DSN")
-      (Schematic "SCHEMATIC1")
+      (Schematic "TMAControl RPI3b+ Hat")
       (Page "LOGIC"))
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 5 24 5 1093 24 618")
-        (Scroll "-33 0")
-        (Zoom "102")
+        (Placement "44 0 1 -1 -1 5 24 5 1156 24 929")
+        (Scroll "-6 -26")
+        (Zoom "114")
         (Occurrence "/"))
       (Path
          "C:\USERS\GRONA\DOCUMENTS\TMACONTROL-CCLIENT\HARDWARE\TMACONTROL.DSN")
-      (Schematic "SCHEMATIC1")
-      (Page "PSPICE"))
+      (Schematic "TMAControl RPI3b+ Hat")
+      (Page "Power"))
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 5 24 5 1093 24 618")
-        (Scroll "-14 0")
-        (Zoom "106")
+        (Placement "44 0 1 -1 -1 -1 -1 5 1156 24 929")
+        (Scroll "-6 -26")
+        (Zoom "114")
         (Occurrence "/"))
       (Path
          "C:\USERS\GRONA\DOCUMENTS\TMACONTROL-CCLIENT\HARDWARE\TMACONTROL.DSN")
-      (Schematic "SCHEMATIC1")
+      (Schematic "TMAControl RPI3b+ Hat")
       (Page "RPI3b+")))
   (ISPCBBASICLICENSE "false"))

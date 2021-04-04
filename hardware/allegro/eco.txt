@@ -1,0 +1,100 @@
+|------------------------------------------------------------------------------|
+|                                 ECO   REPORT                                 |
+|                                                                    Page   1  |
+|------------------------------------------------------------------------------|
+|  C:.../grona/Documents/TMAControl-CClient/hardware/allegro/tmacontrol.brd    |
+|                                                    Sun Apr  4 11:27:00 2021  |
+|------------------------------------------------------------------------------|
+| NET CHANGES                                                                  |
+|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+|   net  name |  type of change |                net     pins                  |
+|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+  3V3          pins ADDED TO this new net
+                                 U2.1           U2.17          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  5V0          pins ADDED TO this new net
+                                 U2.4           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  0            pins ADDED TO this new net
+                                 J1.2           R1.2           U1.2           
+                                 U1.3           U2.34          U3.2           
+                                 U3.3           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  GND          pins ADDED TO this new net
+                                 U2.6           U2.9           U2.14          
+                                 U2.20          U2.25          U2.30          
+                                 U2.39          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  GPIO.5V      pins ADDED TO this new net
+                                 R2.2           U2.2           U3.4           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  GPIO.28.PIN38 pins ADDED TO this new net
+                                 U2.38          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  GPIO.29.PIN40 pins ADDED TO this new net
+                                 R1.1           U1.1           U2.40          
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  N22821       pins ADDED TO this new net
+                                 J1.1           U3.1           
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  PTT.PIN3     pins ADDED TO this new net
+                                 R2.1           U1.4           
+|------------------------------------------------------------------------------|
+|                                 ECO   REPORT                                 |
+|                                                                    Page   2  |
+|------------------------------------------------------------------------------|
+|  C:.../grona/Documents/TMAControl-CClient/hardware/allegro/tmacontrol.brd    |
+|                                                    Sun Apr  4 11:27:00 2021  |
+|------------------------------------------------------------------------------|
+| COMPONENT DEFINITION added to design                                         |
+|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+|    device type                                                               |
+|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+ 12V5V_PSU_PSU_12V_5V_USB_12V5V_PSU
+ HEADER 2_SHDRRA2W100P0X508_1X2_1140X1210X830P_HEADER 2
+ PC816_DIP4_3_PC817
+ RASPBERRY_PI_3_MODEL_B+_0_HDRV40W64P254X254_2X20_5080X508X869P_RASPBERRY_PI_3_MODEL_B+
+ R_AXRC05_4.7K
+ R_AXRC05_10K
+|------------------------------------------------------------------------------|
+|                                 ECO   REPORT                                 |
+|                                                                    Page   3  |
+|------------------------------------------------------------------------------|
+|  C:.../grona/Documents/TMAControl-CClient/hardware/allegro/tmacontrol.brd    |
+|                                                    Sun Apr  4 11:27:00 2021  |
+|------------------------------------------------------------------------------|
+| COMPONENTS ADDED to design                                                   |
+|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+|    ref des        |    device type                                           |
+|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+ J1                  HEADER 2_SHDRRA2W100P0X508_1X2_1140X1210X830P_HEADER 2 
+ R1                  R_AXRC05_10K          
+ R2                  R_AXRC05_4.7K         
+ U1                  PC816_DIP4_3_PC817    
+ U2                  RASPBERRY_PI_3_MODEL_B+_0_HDRV40W64P254X254_2X20_5080X508X869P_RASPBERRY_PI_3_MODEL_B+ 
+ U3                  12V5V_PSU_PSU_12V_5V_USB_12V5V_PSU 
+|------------------------------------------------------------------------------|
+|                                 ECO   REPORT                                 |
+|                                                                    Page   4  |
+|------------------------------------------------------------------------------|
+|  C:.../grona/Documents/TMAControl-CClient/hardware/allegro/tmacontrol.brd    |
+|                                                    Sun Apr  4 11:27:00 2021  |
+|------------------------------------------------------------------------------|
+| SLOT PROPERTIES added to design                                              |
+|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+|   slot_id    |   x   |   y   |   property   |             value              |
+|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+ J1.2                           PRIM_FILE      .\pstchip.dat
+ R1.2                           PRIM_FILE      .\pstchip.dat
+ R2.2                           PRIM_FILE      .\pstchip.dat
+ U1.4                           PRIM_FILE      .\pstchip.dat
+ U2.8                           PRIM_FILE      .\pstchip.dat
+ U3.4                           PRIM_FILE      .\pstchip.dat
+|------------------------------------------------------------------------------|
+|       Nets changed          :      28                                        |
+|       Comp definitions added:       6                                        |
+|       Components added      :       6                                        |
+|       Slot property added   :       6                                        |
+|                                                                              |
+|   Total ECO changes reported:      46                                        |
+|------------------------------------------------------------------------------|
