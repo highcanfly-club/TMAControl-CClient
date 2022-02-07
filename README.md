@@ -1,8 +1,15 @@
 # TMAControl-CClient
 
+# About us
+* Me ( Ronan ) I'm a self-employed developper and a paraglider pilot
+* We ( [High Can Fly parapente](https://www.highcanfly.club) ) are a french paragliding club who start the development and the exploitation of a VHF reporter for the TMA Lille 3.1 .
+
+# Server
+Server code is available on Github here (https://github.com/eltorio/TMAControl)  
 
 # Working controler
 ![schematic](https://github.com/eltorio/TMAControl-CClient/blob/main/hardware/BaliseTMA.jpg?raw=true)
+
 # Installation
   First of all you must have your Raspberry Pi computer up and connected to the Internet. There are plenty of tutorials for doing that. You can connect to the network via ethernet (easy), wifi, gprs/umts/lte or via exotic methods. 
   
