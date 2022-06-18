@@ -291,7 +291,7 @@ size_t writefunc(void *ptr, size_t size, size_t nmemb, struct string *s)
 }
 
 
-CURLcode connectToServer(CURL *curl, char *url, char **certificate,struct string *response)
+CURLcode connectToServer(CURL *curl, char *url, char **_certificate,struct string *response)
 {
     CURLcode code;
     
@@ -323,8 +323,8 @@ CURLcode connectToServer(CURL *curl, char *url, char **certificate,struct string
                     if (strstr( slist->data, "Cert:" ) )
                     {
                         size_t len = strlen(slist->data+strlen("Cert:"));
-                        *certificate = (char *) malloc( (len+1)*sizeof(char) );
-                        strcpy(*certificate, slist->data+5);
+                        *_certificate = (char *) malloc( (len+1)*sizeof(char) );
+                        strcpy(*_certificate, slist->data+5);
                     }
                 }
             }

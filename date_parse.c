@@ -549,7 +549,7 @@ static int match_multi_number(unsigned long num, char c, const char *date,
     case ':':
         if (num3 < 0)
             num3 = 0;
-        if (num < 25 && num2 >= 0 && num2 < 60 && num3 >= 0 && num3 <= 60) {
+        if (num < 25 && num2 >= 0 && num2 < 60 && num3 <= 60) {
             tm->tm_hour = num;
             tm->tm_min = num2;
             tm->tm_sec = num3;
@@ -1127,7 +1127,7 @@ static const char *approxidate_alpha(const char *date, struct tm *tm, struct tm 
     while (tl->type) {
         int len = strlen(tl->type);
         if (match_string(date, tl->type) >= len-1) {
-            update_tm(tm, now, tl->length * *num);
+            update_tm(tm, now, (unsigned long) tl->length * *num);
             *num = 0;
             *touched = 1;
             return end;
